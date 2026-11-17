@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://bcn420vt6vdcw"]
+
+[ext_resource type="Script" uid="uid://dxo8fach872tp" path="res://scripts/gdscripts/rooms/transition_animation.gd" id="1_xo47p"]
+
+[sub_resource type="Animation" id="Animation_bprhp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jbvef"]
+resource_name = "fade_to_black"
+length = 0.35
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.35),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ueyey"]
+resource_name = "fade_to_normal"
+length = 0.35
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00021676166, 0.35006493),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eovp0"]
+_data = {
+&"RESET": SubResource("Animation_bprhp"),
+&"fade_to_black": SubResource("Animation_jbvef"),
+&"fade_to_normal": SubResource("Animation_ueyey")
+}
+
+[node name="TransitionAnimation" type="CanvasLayer" unique_id=695225657]
+script = ExtResource("1_xo47p")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1182213729]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1935237953]
+libraries/ = SubResource("AnimationLibrary_eovp0")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]

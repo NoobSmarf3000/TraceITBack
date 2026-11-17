@@ -1,0 +1,36 @@
+join ACE center
+join Tyrone center
+ACE: Not bad. Manipulating data isn't easy at all.
+Tyrone: Heh... it actually started to make sense.
+Tyrone: But I want to see how Java handled all that math and text.
+ACE: Behind the scenes, Java used concatenation to glue your Strings together into one long sentence.
+ACE: Then it called on its built-in Math tools to crunch the numbers exactly how you told it to.
+ACE: And finally, it boiled your boolean logic down to a simple true or false.
+Tyrone: So it just follows the exact rules I set for the text and numbers.
+ACE: Right. It can't guess what you meant. It only calculates what you give it.
+Tyrone: One wrong symbol and it gets lost.
+Tyrone: I have a feeling the next one is even worse...
+ACE: You say that every time, and you keep getting through.
+Tyrone: ...
+Tyrone: ...yeah, I guess I do.
+Tyrone: Hopefully this one sticks too.
+ACE: Now,
+do DialogueController.room_event("glitch")
+update ACE center 
+ACE: PG&(RVEOV*&(\:TROC$^SIE%RK 665W&CUI CKJUHYES
+ACE: Io75i6x4au julu6k7le6i7k65wj5rktajwek9p786iOI^U%I^&R&I$^st nee—
+Tyrone: ???
+Tyrone: Are you glitching?
+ACE: & C%$WEU&K^URCE&#54e5c8x3w4ex3c45e8&@Q#$&%I^(*)MKU^CET&$U^I%&OR* CO%&I
+ACE: MUTVDKFBLG UBpO&%$EUI%-----
+ACE: Okay, just some turbulence.
+ACE: I'm fine!
+Tyrone: ...
+Tyrone: Right...
+ACE: Now, where was I? Oh right
+ACE: If you want to take a break, you can tell me now
+ACE: But if you're willing to continue to Conditionals and Switches, are you ready for it?
+- Yes
+- Maybe later
+	set {chapter_one.continue_puzzle.Later} = "Later"
+[end_timeline]

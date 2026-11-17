@@ -1,0 +1,6 @@
+You attempt to turn on your computer
+- Turn it on
+	do DialogueController.ace_play("turning_on")
+	[wait time="5.1"]
+	do DialogueController.room_event("intro_accepted")
+- Not now

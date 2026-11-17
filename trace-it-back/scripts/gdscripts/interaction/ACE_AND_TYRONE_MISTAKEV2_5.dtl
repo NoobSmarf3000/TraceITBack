@@ -1,0 +1,26 @@
+join ACE center
+join Tyrone center
+ACE: Not bad. Loops can get dizzying.
+Tyrone: You can say that again. I was worried it would never stop.
+ACE: Behind the scenes, your "while" loop checked the condition first. As long as it stayed true, it kept repeating the block.
+ACE: But because you remembered to update the variable inside, the condition eventually became false, and the loop broke.
+Tyrone: So if I forgot to update it, it would just run forever?
+ACE: Exactly! An infinite loop. Good thing you avoided it.
+Tyrone: I feel like I barely survived that one.
+do DialogueController.room_event("glitch")
+update ACE center 
+ACE: PG&(RVEOV*&(\:TROC$^SIE%RK 665W&CUI CKJUHYES
+ACE: Io75i6x4au julu6k7le6i7k65wj5rktajwek9p786iOI^U%I^&R&I$^st nee—
+Tyrone: ???
+Tyrone: Are you glitching again?
+ACE: & C%$WEU&K^URCE&#54e5c8x3w4ex3c45e8&@Q#$&%I^(*)MKU^CET&$U^I%&OR* CO%&I
+ACE: MUTVDKFBLG UBpO&%$EUI%-----
+ACE: I said... I'm fine!
+Tyrone: ...
+Tyrone: (I'm not so sure about that...)
+ACE: If you want to take a break, you can tell me now
+ACE: But if you're willing to continue to For and Nested Loops, are you ready for it?
+- Yes
+- Maybe later
+	set {chapter_one.continue_puzzle.Later} = "Later"
+[end_timeline]

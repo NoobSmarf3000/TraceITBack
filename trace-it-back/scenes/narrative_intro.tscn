@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cgjypcn2tjr7l"]
+
+[ext_resource type="Script" uid="uid://d3eqbrch4fh1c" path="res://scenes/narrative_intro.gd" id="1_aulxv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ptwnc"]
+
+[node name="NarrativeIntro" type="CanvasLayer" unique_id=459614332]
+script = ExtResource("1_aulxv")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1101208913]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Panel" type="Panel" parent="." unique_id=990840749]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ptwnc")

@@ -1,0 +1,34 @@
+join ACE center
+join Tyrone center
+ACE: Not bad. Honestly, that was the hardest one.
+Tyrone: Woah... I actually got through it.
+Tyrone: But I want to know how it decided which path to take.
+ACE: Behind the scenes, the "if" statement checked your condition. Since it was true, it ran that specific block of code.
+ACE: The "else" and "else if" blocks were completely ignored. Java only ever takes one road.
+ACE: And for the "switch", it just looked at the variable and jumped straight to the matching case.
+Tyrone: So one condition wins, and the rest get skipped.
+ACE: You've got it, buddy. That's control flow. You tell the program how to think.
+ACE: And every slip you made along the way taught you something.
+Tyrone: Okay... I think I could actually explain this to somebody.
+do DialogueController.room_event("glitch")
+update ACE center 
+ACE: Io75i6x4au julu6k7le6i7k65wj5rktajwek9p786iOI^U%I^&R&I$^st nee—
+Tyrone: I guess I—
+Tyrone: Wait...
+Tyrone: Did... you just glitch?
+ACE: What?
+ACE: W-what's happeni#YGTRui lyFD%#C$ygoT5e$E
+Tyrone: ....
+ACE: & C%$WEU&K^URCE&#54e5c8x3w4ex3c45e8&@Q#$&%I^(*)MKU^CET&$U^I%&OR* CO%&I
+ACE: MUTVDKFBLG UBpO&%$EUI%-----
+ACE: Okay, just some turbulence.
+ACE: I'm fine!
+Tyrone: ...
+Tyrone: Right...
+ACE: Now, where was I? Oh right.
+ACE: If you want to take a break, you can tell me now
+ACE: But if you're willing to continue to While and Do-While Loops, are you ready for it?
+- Yes
+- Maybe later
+	set {chapter_one.continue_puzzle.Later} = "Later"
+[end_timeline]

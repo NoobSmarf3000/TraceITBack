@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://b76vbsgwmirxq"]
+
+[ext_resource type="Script" uid="uid://bmr8gp1tt1gle" path="res://scripts/gdscripts/rooms/rooftop.gd" id="1_2g80b"]
+[ext_resource type="Texture2D" uid="uid://cu2uow47whp6v" path="res://assets/backgrounds/rooftop.aseprite" id="1_bnpb5"]
+[ext_resource type="Script" uid="uid://ccbpovakcbeoi" path="res://scripts/gdscripts/interaction/InteractionObject.gd" id="3_dnbfp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2g80b"]
+size = Vector2(640, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bnpb5"]
+size = Vector2(20, 501)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dnbfp"]
+size = Vector2(37, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2gun"]
+size = Vector2(138, 85.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fegy4"]
+size = Vector2(1080, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s350u"]
+size = Vector2(1218, 20)
+
+[node name="Rooftop" type="Area2D" unique_id=1595095364 groups=["player"]]
+script = ExtResource("1_2g80b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1174638268]
+shape = SubResource("RectangleShape2D_2g80b")
+
+[node name="Rooftop" type="Sprite2D" parent="." unique_id=456434722]
+texture = ExtResource("1_bnpb5")
+
+[node name="RoomBorder1" type="Area2D" parent="." unique_id=1633616905 groups=["player"]]
+position = Vector2(-318, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder1" unique_id=1012694656]
+position = Vector2(0, 9.5)
+shape = SubResource("RectangleShape2D_bnpb5")
+
+[node name="RoomBorder2" type="StaticBody2D" parent="." unique_id=1727996288]
+position = Vector2(260, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder2" unique_id=1788146941]
+position = Vector2(-11.5, 0)
+shape = SubResource("RectangleShape2D_dnbfp")
+
+[node name="InteractionBox" type="Area2D" parent="RoomBorder2" unique_id=1888467533]
+collision_layer = 2
+collision_priority = 2.0
+monitorable = false
+script = ExtResource("3_dnbfp")
+interaction_name = "ROOFTOP_FENCE"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder2/InteractionBox" unique_id=1543728538 groups=["player"]]
+position = Vector2(-3, -11.875)
+shape = SubResource("RectangleShape2D_g2gun")
+
+[node name="RoomBorder3" type="StaticBody2D" parent="." unique_id=404530019]
+position = Vector2(1, -191)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder3" unique_id=1839189583]
+position = Vector2(0, -26)
+shape = SubResource("RectangleShape2D_fegy4")
+
+[node name="InteractionBox" type="Area2D" parent="RoomBorder3" unique_id=2093839973]
+collision_layer = 2
+collision_priority = 2.0
+monitorable = false
+script = ExtResource("3_dnbfp")
+interaction_name = "ROOFTOP_FENCE"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder3/InteractionBox" unique_id=1628844628 groups=["player"]]
+position = Vector2(-3, -11.875)
+shape = SubResource("RectangleShape2D_g2gun")
+
+[node name="RoomBorder4" type="StaticBody2D" parent="." unique_id=1584114901]
+position = Vector2(0, 240)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder4" unique_id=553899605]
+shape = SubResource("RectangleShape2D_s350u")
+
+[node name="SpawnPoints" type="Node" parent="." unique_id=1977634998 groups=["player"]]
+
+[node name="FromRoom1" type="Marker2D" parent="SpawnPoints" unique_id=466615873]
+position = Vector2(-294, 184)
+
+[node name="Default" type="Marker2D" parent="SpawnPoints" unique_id=444521639]
+position = Vector2(-267, 184)
+
+[connection signal="body_entered" from="RoomBorder1" to="." method="_on_room_border_1_body_entered"]

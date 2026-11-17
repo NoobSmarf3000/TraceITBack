@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://celoq7s3vrhbh"]
+
+[ext_resource type="Texture2D" uid="uid://dw8j8x7rae03r" path="res://assets/backgrounds/rooftop.jpg" id="2_1tatf"]
+[ext_resource type="PackedScene" uid="uid://47jrwh5h63d4" path="res://scenes/main_menu/settings_panel.tscn" id="4_1tatf"]
+[ext_resource type="Script" uid="uid://bc4pwfdw3dfr4" path="res://scripts/autoload/settings.gd" id="5_63iy3"]
+
+[node name="Settings" type="Control" unique_id=1037701463]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_63iy3")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=718641568]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.5020001
+anchor_bottom = 1.5070001
+offset_right = -321.28003
+offset_bottom = -241.85303
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1tatf")
+expand_mode = 1
+
+[node name="SettingsPanel" parent="." unique_id=1369956925 instance=ExtResource("4_1tatf")]
+layout_mode = 1
+offset_bottom = -1.0

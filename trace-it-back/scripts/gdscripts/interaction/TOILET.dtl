@@ -1,0 +1,4 @@
+if {interactions._2nd_interaction_onwards} == "":
+	A toilet. You're probably expecting a head to pop out of it and mess you up.
+else:
+	A toilet. You're probably expecting a head to pop out of it and say something like "skibidi".

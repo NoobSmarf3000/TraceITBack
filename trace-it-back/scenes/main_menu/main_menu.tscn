@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://bgch2xet7ysta"]
+
+[ext_resource type="Script" uid="uid://b68mdpwhm0xg4" path="res://scripts/menu/mainmenu.gd" id="1_fsom3"]
+[ext_resource type="Texture2D" uid="uid://dw8j8x7rae03r" path="res://assets/backgrounds/rooftop.jpg" id="2_0ebjn"]
+[ext_resource type="FontFile" uid="uid://um2egfwsdklw" path="res://assets/texts/DeterminationSansWebRegular-369X.ttf" id="3_uqeha"]
+[ext_resource type="FontFile" uid="uid://dbd8pewjsdpi2" path="res://assets/texts/DeterminationMonoWebRegular-Z5oq.ttf" id="4_wem23"]
+[ext_resource type="Texture2D" uid="uid://0jo7gtpopncd" path="res://assets/sprites/TraceITbackTitle.png" id="5_wem23"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ebjn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ob46e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqeha"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wem23"]
+
+[node name="MainMenu" type="Control" unique_id=1037701463]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 2
+script = ExtResource("1_fsom3")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1450480917]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.5020001
+anchor_bottom = 1.5070001
+offset_right = -321.28003
+offset_bottom = -242.85303
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0ebjn")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1784300061]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.044000003
+anchor_top = 0.349
+anchor_right = 0.044000003
+anchor_bottom = 0.349
+offset_left = -0.16000175
+offset_top = 6.8289948
+offset_right = 323.84
+offset_bottom = 201.829
+focus_mode = 2
+mouse_filter = 2
+
+[node name="NewGame" type="Button" parent="VBoxContainer" unique_id=2096497597]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0, 0.36862746)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_uqeha")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0ebjn")
+text = "New Game"
+
+[node name="LoadGame" type="Button" parent="VBoxContainer" unique_id=163885432]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0, 0.36862746)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_uqeha")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ob46e")
+text = "Load Game"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=2063288989]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0, 0.36862746)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wem23")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uqeha")
+text = "Settings"
+
+[node name="ExitGame" type="Button" parent="VBoxContainer" unique_id=228918834]
+layout_mode = 2
+focus_mode = 1
+focus_behavior_recursive = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0, 0.36862746)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_uqeha")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wem23")
+text = "Exit Game"
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1314160583]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.022000002
+anchor_top = 0.07300001
+anchor_right = 0.022000002
+anchor_bottom = 0.07300001
+offset_left = -0.08000088
+offset_top = 0.03299713
+offset_right = 479.92
+offset_bottom = 128.03299
+texture = ExtResource("5_wem23")
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"output_section": false,
+"pending_changes": {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "",
+"source_uid": -1
+},
+"slice_section": true
+}
+
+[connection signal="pressed" from="VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/LoadGame" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed"]

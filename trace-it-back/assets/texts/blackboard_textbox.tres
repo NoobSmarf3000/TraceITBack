@@ -1,0 +1,14 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://c8dbf4ewkfaw3"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_0fmgt"]
+size_override = Vector2(128, 72)
+
+[resource]
+texture = SubResource("PortableCompressedTexture2D_0fmgt")
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+region_rect = Rect2(5, 22.981949, 116, 36.047813)

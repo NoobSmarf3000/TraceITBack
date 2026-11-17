@@ -1,0 +1,16 @@
+join ACE center
+ACE: Nice, but we're not done yet!
+join Tyrone center
+Tyrone: Something tells me there's another kind of loop...
+Tyrone: ...But I actually did it...
+ACE: You sure did! You survived the while loops.
+ACE: But now, we are going to take loops, and put them inside of other loops!
+Tyrone: ...Loop inception. Great.
+Tyrone: My head already hurts just thinking about it.
+ACE: You'll be fine!
+ACE: Now, if you want to take a break, you can tell me now.
+ACE: But if you're willing to continue forth to For and Nested Loops, are you ready for it?
+- Yes
+- Maybe later
+	set {chapter_one.continue_puzzle.Later} = "Later"
+[end_timeline]

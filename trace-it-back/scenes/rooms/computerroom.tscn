@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://d2bu8vmmhws5d"]
+
+[ext_resource type="Script" uid="uid://d4gkhnslyop71" path="res://scripts/gdscripts/rooms/computerroom.gd" id="1_050ld"]
+[ext_resource type="Texture2D" uid="uid://ceamcxtb3gu3m" path="res://assets/backgrounds/computerroom.aseprite" id="1_idu3b"]
+[ext_resource type="Texture2D" uid="uid://dtra4i42qpb82" path="res://assets/sprites/bookshelf.aseprite" id="2_nlskp"]
+[ext_resource type="Texture2D" uid="uid://cfsijygmnitmn" path="res://assets/items/desk.aseprite" id="3_050ld"]
+[ext_resource type="PackedScene" uid="uid://dep42iif5130f" path="res://scenes/ace.tscn" id="4_i882p"]
+[ext_resource type="Script" uid="uid://ccbpovakcbeoi" path="res://scripts/gdscripts/interaction/InteractionObject.gd" id="4_nhstg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jasw7"]
+size = Vector2(640, 360)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idu3b"]
+size = Vector2(20, 501)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r73k1"]
+size = Vector2(20, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nlskp"]
+size = Vector2(1080, 188)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_050ld"]
+size = Vector2(1218, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08ka6"]
+size = Vector2(138, 116.5625)
+
+[node name="ComputerRoom" type="Area2D" unique_id=1477335901 groups=["player"]]
+script = ExtResource("1_050ld")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1299370645]
+shape = SubResource("RectangleShape2D_jasw7")
+
+[node name="Computerroom" type="Sprite2D" parent="." unique_id=35568659]
+texture = ExtResource("1_idu3b")
+
+[node name="RoomBorder1" type="Area2D" parent="." unique_id=1241921827 groups=["player"]]
+position = Vector2(-320, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder1" unique_id=1651304929]
+position = Vector2(0, 9.5)
+shape = SubResource("RectangleShape2D_idu3b")
+
+[node name="RoomBorder2" type="StaticBody2D" parent="." unique_id=834004578]
+position = Vector2(320, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder2" unique_id=2118141414]
+position = Vector2(-3, 0)
+shape = SubResource("RectangleShape2D_r73k1")
+
+[node name="RoomBorder3" type="StaticBody2D" parent="." unique_id=1072062829]
+position = Vector2(0, -154)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder3" unique_id=122211879]
+position = Vector2(0, 18)
+shape = SubResource("RectangleShape2D_nlskp")
+
+[node name="RoomBorder4" type="StaticBody2D" parent="." unique_id=444650388]
+position = Vector2(0, 180)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder4" unique_id=1730477225]
+shape = SubResource("RectangleShape2D_050ld")
+
+[node name="BookShelf" type="StaticBody2D" parent="." unique_id=912767910]
+position = Vector2(50, 21)
+
+[node name="Bookshelf" type="Sprite2D" parent="BookShelf" unique_id=1978064502]
+texture = ExtResource("2_nlskp")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BookShelf" unique_id=1076909148]
+polygon = PackedVector2Array(-34, -47, -8, -47, 29, -47, 33, -43, 37, -39, 37, -11, 34, -11, 29, -11, 21, -11, 9, -11, -10, -11, -18, -11, -26, -11, -31, -11, -34, -11, -34, -20)
+
+[node name="InteractionBox" type="Area2D" parent="BookShelf" unique_id=817253967]
+collision_layer = 2
+collision_priority = 2.0
+monitorable = false
+script = ExtResource("4_nhstg")
+interaction_name = "COMPUTERROOM_BOOKSHELF"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BookShelf/InteractionBox" unique_id=1557252069 groups=["player"]]
+position = Vector2(-3, 3.71875)
+shape = SubResource("RectangleShape2D_08ka6")
+
+[node name="Desk" type="StaticBody2D" parent="." unique_id=219363168]
+position = Vector2(-71, 28)
+
+[node name="Desk" type="Sprite2D" parent="Desk" unique_id=662119040]
+position = Vector2(-11, 1)
+texture = ExtResource("3_050ld")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Desk" unique_id=1543406856]
+position = Vector2(38, 1)
+polygon = PackedVector2Array(-82, -17, -82, -17, -45, -17, -10, -17, 25, -17, 35, -7, 27, -7, 20, -7, 5, -7, -30, -7, -64, -7, -93, -7, -113, -7, -120, -7, -132, -7, -139, -12, -142, -16, -142, -17, -126, -17, -94, -17)
+
+[node name="ACE" parent="." unique_id=750308467 instance=ExtResource("4_i882p")]
+position = Vector2(-71, 25)
+
+[node name="InteractionBox" type="Area2D" parent="ACE" unique_id=1891504257]
+collision_layer = 2
+collision_priority = 2.0
+monitorable = false
+script = ExtResource("4_nhstg")
+interaction_name = "COMPUTERROOM_ACE"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ACE/InteractionBox" unique_id=2002720713 groups=["player"]]
+position = Vector2(-10, -2)
+shape = SubResource("RectangleShape2D_08ka6")
+
+[node name="SpawnPoints" type="Node" parent="." unique_id=1082142647 groups=["player"]]
+
+[node name="FromRoom4" type="Marker2D" parent="SpawnPoints" unique_id=1785946475]
+position = Vector2(-286, 134)
+
+[node name="Default" type="Marker2D" parent="SpawnPoints" unique_id=1755878264]
+position = Vector2(0, 125)
+
+[connection signal="body_entered" from="RoomBorder1" to="." method="_on_room_border_1_body_entered"]

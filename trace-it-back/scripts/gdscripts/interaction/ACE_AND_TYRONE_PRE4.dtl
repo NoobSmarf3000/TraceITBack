@@ -1,0 +1,15 @@
+join ACE center
+join Tyrone center
+ACE: This time, our program gets to make decisions.
+ACE: The "if" statement asks a condition, and only runs its block of code if the answer is true.
+ACE: To check if two things are equal, we use two equals signs (==). 
+ACE: One equals sign stores a value. Two equals signs compare values. Don't mix those up!
+Tyrone: And if the condition is false?
+ACE: Then the "else" block runs instead. Or "else if" if you have multiple conditions. The program takes one road or the other—never both.
+Tyrone: Got it. One path wins.
+ACE: We also have "switch" cases, which are like a train switching tracks depending on a specific value.
+ACE: This has the most empty spots so far. Take your time and read the logic before you drag anything in.
+Tyrone: ...Okay. Deep breath.
+ACE: And remember, seven mistakes is the limit.
+Tyrone: (Don't remind me...)
+[end_timeline]

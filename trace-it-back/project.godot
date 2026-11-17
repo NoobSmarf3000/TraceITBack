@@ -8,16 +8,378 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Trace(it)back"
-config/features=PackedStringArray("4.3", "Mobile")
-config/icon="res://icon.svg"
+run/main_scene="uid://cgjypcn2tjr7l"
+config/features=PackedStringArray("4.6", "Mobile")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/stretch_mode=0
+boot_splash/image="uid://0jo7gtpopncd"
+config/icon="uid://ma57vf1oy41v"
+
+[audio]
+
+buses/default_bus_layout="uid://bw0lrrs8v1j17"
+
+[autoload]
+
+GameManager="*uid://clx434i5qy08k"
+SaveManager="*uid://dcv4fbcs24sbr"
+Dialogic="*uid://ds2q0uclmolvu"
+DialogueController="*uid://bl65npvsl340o"
+TransitionAnimation="*uid://bcn420vt6vdcw"
+NavigationManager="*uid://bcqe0jqlgmuwy"
+PauseMenuManager="*uid://bpmy77g2k4nt5"
+SettingsManager="*uid://kv68gtrhxnp5"
+AudioManager="*uid://cu6a3wsbcuxfx"
+
+[dialogic]
+
+directories/dch_directory={
+"ACE": "res://scripts/characters/ACE.dch",
+"Tyrone": "res://scripts/characters/Tyrone.dch",
+"narrator": "res://scripts/characters/narrator.dch",
+"unit_test_character": "res://dialogic-2.0-alpha-19/Tests/Resources/unit_test_character.dch"
+}
+directories/dtl_directory={
+"ACE_AND_TYRONE1": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE1.dtl",
+"ACE_AND_TYRONE_BAD2": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_BAD2.dtl",
+"ACE_AND_TYRONE_BAD3": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_BAD3.dtl",
+"ACE_AND_TYRONE_BAD4": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_BAD4.dtl",
+"ACE_AND_TYRONE_BAD5": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_BAD5.dtl",
+"ACE_AND_TYRONE_BAD6": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_BAD6.dtl",
+"ACE_AND_TYRONE_BAD7": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_BAD7.dtl",
+"ACE_AND_TYRONE_GOOD2": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_GOOD2.dtl",
+"ACE_AND_TYRONE_GOOD3": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_GOOD3.dtl",
+"ACE_AND_TYRONE_GOOD4": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_GOOD4.dtl",
+"ACE_AND_TYRONE_GOOD5": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_GOOD5.dtl",
+"ACE_AND_TYRONE_GOOD6": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_GOOD6.dtl",
+"ACE_AND_TYRONE_GOOD7": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_GOOD7.dtl",
+"ACE_AND_TYRONE_PRE1": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_PRE1.dtl",
+"ACE_AND_TYRONE_PRE2": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_PRE2.dtl",
+"ACE_AND_TYRONE_PRE3": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_PRE3.dtl",
+"ACE_AND_TYRONE_PRE4": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_PRE4.dtl",
+"ACE_AND_TYRONE_PRE5": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_PRE5.dtl",
+"ACE_AND_TYRONE_PRE6": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_PRE6.dtl",
+"ACE_AND_TYRONE_PUZZLE_MISTAKEV1_1": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_MISTAKEV1_1.dtl",
+"ACE_AND_TYRONE_PUZZLE_MISTAKEV1_2": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_MISTAKEV1_2.dtl",
+"ACE_AND_TYRONE_PUZZLE_MISTAKEV1_3": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_MISTAKEV1_3.dtl",
+"ACE_AND_TYRONE_PUZZLE_MISTAKEV1_4": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_MISTAKEV1_4.dtl",
+"ACE_AND_TYRONE_PUZZLE_MISTAKEV1_5": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_MISTAKEV1_5.dtl",
+"ACE_AND_TYRONE_PUZZLE_MISTAKEV1_6": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_MISTAKEV1_6.dtl",
+"ACE_AND_TYRONE_PUZZLE_MISTAKEV2_1": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_MISTAKEV2_1.dtl",
+"ACE_AND_TYRONE_PUZZLE_MISTAKEV2_2": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_MISTAKEV2_2.dtl",
+"ACE_AND_TYRONE_PUZZLE_MISTAKEV2_3": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_MISTAKEV2_3.dtl",
+"ACE_AND_TYRONE_PUZZLE_MISTAKEV2_4": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_MISTAKEV2_4.dtl",
+"ACE_AND_TYRONE_PUZZLE_MISTAKEV2_5": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_MISTAKEV2_5.dtl",
+"ACE_AND_TYRONE_PUZZLE_MISTAKEV2_6": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_MISTAKEV2_6.dtl",
+"ACE_AND_TYRONE_PUZZLE_MISTAKEV3_1": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_MISTAKEV3_1.dtl",
+"ACE_AND_TYRONE_PUZZLE_MISTAKEV3_2": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_MISTAKEV3_2.dtl",
+"ACE_AND_TYRONE_PUZZLE_MISTAKEV3_3": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_MISTAKEV3_3.dtl",
+"ACE_AND_TYRONE_PUZZLE_MISTAKEV3_4": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_MISTAKEV3_4.dtl",
+"ACE_AND_TYRONE_PUZZLE_MISTAKEV3_5": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_MISTAKEV3_5.dtl",
+"ACE_AND_TYRONE_PUZZLE_MISTAKEV3_6": "res://scripts/gdscripts/interaction/ACE_AND_TYRONE_MISTAKEV3_6.dtl",
+"BATHROOM_SHOWERTUB": "res://scripts/gdscripts/interaction/BATHROOM_SHOWERTUB.dtl",
+"BATHROOM_SINK": "res://scripts/gdscripts/interaction/BATHROOM_SINK.dtl",
+"BEDROOM_BED": "res://scripts/gdscripts/interaction/BEDROOM_BED.dtl",
+"BEDROOM_DRAWER": "res://scripts/gdscripts/interaction/BEDROOM_DRAWER.dtl",
+"BEDROOM_SHELF": "res://scripts/gdscripts/interaction/BEDROOM_SHELF.dtl",
+"COMPUTERROOM_ACE": "res://scripts/gdscripts/interaction/COMPUTERROOM_ACE.dtl",
+"COMPUTERROOM_BOOKSHELF": "res://scripts/gdscripts/interaction/COMPUTERROOM_BOOKSHELF.dtl",
+"ENDING_CH1": "res://scripts/gdscripts/interaction/ENDING_CH1.dtl",
+"GAME_INTRO": "res://scripts/gdscripts/interaction/GAME_INTRO.dtl",
+"INTRO_1": "res://scripts/gdscripts/interaction/INTRO_1.dtl",
+"INTRO_FORCESKIP": "res://scripts/gdscripts/interaction/INTRO_FORCESKIP.dtl",
+"INTRO_RETURN": "res://scripts/gdscripts/interaction/INTRO_RETURN.dtl",
+"INTRO_SKIPPED": "res://scripts/gdscripts/interaction/INTRO_SKIPPED.dtl",
+"ROOFTOP_FENCE": "res://scripts/gdscripts/interaction/ROOFTOP_FENCE.dtl",
+"ROOM1_PARENT_DOOR": "res://scripts/gdscripts/interaction/ROOM1_PARENT_DOOR.dtl",
+"ROOM2_DINING_TABLE": "res://scripts/gdscripts/interaction/ROOM2_DINING_TABLE.dtl",
+"ROOM3_COOKINGRANGE": "res://scripts/gdscripts/interaction/ROOM3_COOKINGRANGE.dtl",
+"ROOM3_FRIDGE": "res://scripts/gdscripts/interaction/ROOM3_FRIDGE.dtl",
+"ROOM3_KITCHEN1": "res://scripts/gdscripts/interaction/ROOM3_KITCHEN1.dtl",
+"ROOM4_COUCH": "res://scripts/gdscripts/interaction/ROOM4_COUCH.dtl",
+"ROOM4_FRONT_DOOR": "res://scripts/gdscripts/interaction/ROOM4_FRONT_DOOR.dtl",
+"ROOM4_TV": "res://scripts/gdscripts/interaction/ROOM4_TV.dtl",
+"TIMEOUT_ENDING_CH1": "res://scripts/gdscripts/interaction/TIMEOUT_ENDING_CH1.dtl",
+"TOILET": "res://scripts/gdscripts/interaction/TOILET.dtl"
+}
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.02
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
+layout/style_directory={
+"": "res://addons/dialogic/Modules/DefaultLayoutParts/Style_VN_Default/default_vn_style.tres"
+}
+glossary/default_case_sensitive=true
+layout/style_list=[]
+layout/default_style="res://addons/dialogic/Modules/DefaultLayoutParts/Style_VN_Default/default_vn_style.tres"
+variables={
+"chapter_one": {
+"ace_and_tyrone_pre": {
+"ace_and_tyrone_pre1": "",
+"ace_and_tyrone_pre2": "",
+"ace_and_tyrone_pre3": "",
+"ace_and_tyrone_pre4": "",
+"ace_and_tyrone_pre5": "",
+"ace_and_tyrone_pre6": ""
+},
+"ace_and_tyrone_puzzle_ending_mistake_1": {
+"ace_and_tyrone_puzzle_ending_mistakev1_1": "",
+"ace_and_tyrone_puzzle_ending_mistakev2_1": "",
+"ace_and_tyrone_puzzle_ending_mistakev3_1": ""
+},
+"ace_and_tyrone_puzzle_ending_mistake_2": {
+"ace_and_tyrone_puzzle_ending_mistakev1_2": "",
+"ace_and_tyrone_puzzle_ending_mistakev2_2": "",
+"ace_and_tyrone_puzzle_ending_mistakev3_2": ""
+},
+"ace_and_tyrone_puzzle_ending_mistake_3": {
+"ace_and_tyrone_puzzle_ending_mistakev1_3": "",
+"ace_and_tyrone_puzzle_ending_mistakev2_3": "",
+"ace_and_tyrone_puzzle_ending_mistakev3_3": ""
+},
+"ace_and_tyrone_puzzle_ending_mistake_4": {
+"ace_and_tyrone_puzzle_ending_mistakev1_4": "",
+"ace_and_tyrone_puzzle_ending_mistakev2_4": "",
+"ace_and_tyrone_puzzle_ending_mistakev3_4": ""
+},
+"ace_and_tyrone_puzzle_ending_mistake_5": {
+"ace_and_tyrone_puzzle_ending_mistakev1_5": "",
+"ace_and_tyrone_puzzle_ending_mistakev2_5": "",
+"ace_and_tyrone_puzzle_ending_mistakev3_5": ""
+},
+"ace_and_tyrone_puzzle_ending_mistake_6": {
+"ace_and_tyrone_puzzle_ending_mistakev1_6": "",
+"ace_and_tyrone_puzzle_ending_mistakev2_6": "",
+"ace_and_tyrone_puzzle_ending_mistakev3_6": ""
+},
+"ace_puzzle_ending_bad": {
+"ace_and_tyrone_puzzle_bad2": "",
+"ace_and_tyrone_puzzle_bad3": "",
+"ace_and_tyrone_puzzle_bad4": "",
+"ace_and_tyrone_puzzle_bad5": "",
+"ace_and_tyrone_puzzle_bad6": "",
+"ace_and_tyrone_puzzle_bad7": ""
+},
+"ace_puzzle_ending_good": {
+"ace_and_tyrone_puzzle_good2": "",
+"ace_and_tyrone_puzzle_good3": "",
+"ace_and_tyrone_puzzle_good4": "",
+"ace_and_tyrone_puzzle_good5": "",
+"ace_and_tyrone_puzzle_good6": "",
+"ace_and_tyrone_puzzle_good7": ""
+},
+"audit_logs": {
+"puzzle1": {
+"failed": "",
+"lives_lost": 0,
+"main_error": "",
+"mistakes": 0,
+"worst_step": "",
+"worst_topic": ""
+},
+"puzzle2": {
+"failed": "",
+"lives_lost": 0,
+"main_error": "",
+"mistakes": 0,
+"worst_step": "",
+"worst_topic": ""
+},
+"puzzle3": {
+"failed": "",
+"lives_lost": 0,
+"main_error": "",
+"mistakes": 0,
+"worst_step": "",
+"worst_topic": ""
+},
+"puzzle4": {
+"failed": "",
+"lives_lost": 0,
+"main_error": "",
+"mistakes": 0,
+"worst_step": "",
+"worst_topic": ""
+},
+"puzzle5": {
+"failed": "",
+"lives_lost": 0,
+"main_error": "",
+"mistakes": 0,
+"worst_step": "",
+"worst_topic": ""
+},
+"puzzle6": {
+"failed": "",
+"lives_lost": 0,
+"main_error": "",
+"mistakes": 0,
+"worst_step": "",
+"worst_topic": ""
+},
+"summary": {
+"favorite_error": "",
+"quiz_mistakes": 0,
+"total_lives_lost": 0,
+"total_mistakes": 0,
+"worst_puzzle": 0
+}
+},
+"chap_one_ending": "",
+"chap_one_timeout_ending": "",
+"continue_puzzle": {
+"Later": "",
+"Yes": ""
+}
+},
+"interactions": {
+"_2nd_interaction_onwards": "",
+"last_interacted": "",
+"last_interacted_bed": "",
+"last_interacted_bookshelf": "",
+"last_interacted_cookingrange": "",
+"last_interacted_couch": "",
+"last_interacted_diningtable": "",
+"last_interacted_drawer": "",
+"last_interacted_fence": "",
+"last_interacted_fridge": "",
+"last_interacted_front_door": "",
+"last_interacted_kitchen1": "",
+"last_interacted_parent_door": "",
+"last_interacted_shelf": "",
+"last_interacted_sink": "",
+"last_interacted_toilet": "",
+"last_interacted_tv": ""
+},
+"intro": {
+"intro_skip_count": 3,
+"intro_skipped": "1"
+}
+}
+animations/leave_default="Fade Out Down"
+text/input_action="dialogic_default_action"
+timer/process_in_physics=true
+text/split_at_new_lines_as=1
+text/split_at_new_lines=true
+text/autocolor_names=true
+text/custom_bbcode_effects=""
+text/autoskip_time_per_event=0.1
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=480
+window/size/initial_position_type=0
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [dotnet]
 
 project/assembly_name="Trace(it)back"
 
+[editor]
+
+movie_writer/disable_vsync=true
+version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/AutoKey_SpriteFrames/plugin.cfg", "res://addons/dialogic/plugin.cfg")
+
+[global_group]
+
+player=""
+
+[input]
+
+walk_down={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194322,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
+]
+}
+walk_up={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194320,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
+]
+}
+walk_left={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194319,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"location":0,"echo":false,"script":null)
+]
+}
+walk_right={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194321,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
+]
+}
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+pause={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":67,"key_label":0,"unicode":99,"location":0,"echo":false,"script":null)
+]
+}
+interact={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":88,"key_label":0,"unicode":120,"location":0,"echo":false,"script":null)
+]
+}
+skip_dialogue={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":74,"key_label":0,"unicode":106,"location":0,"echo":false,"script":null)
+]
+}
+
 [rendering]
 
-renderer/rendering_method="mobile"
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

@@ -1,0 +1,19 @@
+join ACE center
+join Tyrone center
+ACE: This time, our program needs to remember things. That's where variables come in.
+ACE: Think of a variable as a labeled box that holds a specific type of data.
+ACE: "int x = 5;" makes a box named x that holds a whole number. 
+ACE: "String message = "Hello";" makes a box for text.
+Tyrone: So "int" is for numbers, and "String" is for text. Type first, then the name.
+ACE: Exactly! And we use a single equals sign (=) to store that value inside the box.
+ACE: We also have other types, like "boolean", and we can use math operators like plus (+) and minus (-) to calculate things.
+Tyrone: Got it. Store things in boxes, manipulate the boxes.
+ACE: You're getting the hang of this!
+ACE: Just a heads-up: some words might be used more than once, so feel free to reuse them.
+Tyrone: Same box name, same spelling. 
+Tyrone: And they're all still puzzles, right?
+ACE: Yep! 
+ACE: Just a heads-up though, Java is incredibly picky about capitalization and spelling. 
+ACE: And don't forget... your seven-mistake limit is still watching.
+Tyrone: (I really need to find out what happens at seven... Actually, nevermind.)
+[end_timeline]

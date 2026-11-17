@@ -1,0 +1,11 @@
+join ACE center
+join Tyrone center
+ACE: The "while" loop is great, but sometimes we know exactly how many times we want to loop.
+ACE: That's where the "for" loop shines. It packs the setup, the condition, and the update all into one neat line.
+Tyrone: So it's a while loop, but organized better.
+ACE: You're catching on fast! But here's the fun part: Nested loops.
+Tyrone: Loops inside loops.
+ACE: Yep! For every one time the outside loop runs, the inside loop runs completely from start to finish.
+Tyrone: This is starting to hurt my brain a little.
+ACE: Just trace the code one line at a time. You've got this!
+[end_timeline]

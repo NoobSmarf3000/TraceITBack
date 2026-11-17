@@ -1,0 +1,216 @@
+[gd_scene format=3 uid="uid://dbj0k4fyutew6"]
+
+[ext_resource type="FontFile" uid="uid://ic6b8yju1e8a" path="res://assets/texts/static/Nunito-Bold.ttf" id="1_cdh0q"]
+[ext_resource type="Script" uid="uid://c6emvca4peuqn" path="res://scripts/menu/pause_menu.gd" id="1_g03ps"]
+[ext_resource type="Script" uid="uid://foevgl6xqi86" path="res://scripts/menu/stat_bar.gd" id="3_64vob"]
+[ext_resource type="PackedScene" uid="uid://47jrwh5h63d4" path="res://scenes/main_menu/settings_panel.tscn" id="3_gqsfd"]
+[ext_resource type="FontFile" uid="uid://carq468jgkgw2" path="res://assets/texts/CfBlackboardPersonalRegular-AKPg.ttf" id="5_title"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+content_margin_left = 28.0
+content_margin_top = 20.0
+content_margin_right = 28.0
+content_margin_bottom = 24.0
+bg_color = Color(0.09, 0.07, 0.15, 0.94)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.62, 0.52, 0.82, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="PauseMenuLayer" type="CanvasLayer" unique_id=451501717]
+layer = 100
+
+[node name="PauseMenu" type="Control" parent="." unique_id=1201000001]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g03ps")
+
+[node name="Dim" type="ColorRect" parent="PauseMenu" unique_id=1201000002]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.3019608)
+
+[node name="TopBar" type="CenterContainer" parent="PauseMenu" unique_id=1201000003]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="PauseMenu/TopBar" unique_id=1201000004]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="VBox" type="VBoxContainer" parent="PauseMenu/TopBar/Panel" unique_id=1201000005]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="PauseMenu/TopBar/Panel/VBox" unique_id=1201000006]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_title")
+theme_override_font_sizes/font_size = 52
+text = "Paused"
+horizontal_alignment = 1
+
+[node name="Resume" type="Button" parent="PauseMenu/TopBar/Panel/VBox" unique_id=1201000007]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cdh0q")
+theme_override_font_sizes/font_size = 24
+text = "Resume"
+
+[node name="Stats" type="Button" parent="PauseMenu/TopBar/Panel/VBox" unique_id=1201000008]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cdh0q")
+theme_override_font_sizes/font_size = 24
+text = "Stats"
+
+[node name="Settings" type="Button" parent="PauseMenu/TopBar/Panel/VBox" unique_id=1201000009]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cdh0q")
+theme_override_font_sizes/font_size = 24
+text = "Settings"
+
+[node name="Quit" type="Button" parent="PauseMenu/TopBar/Panel/VBox" unique_id=1201000010]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cdh0q")
+theme_override_font_sizes/font_size = 24
+text = "Quit"
+
+[node name="SettingsPanel" parent="PauseMenu" unique_id=1201000011 instance=ExtResource("3_gqsfd")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="QuitPanel" type="CenterContainer" parent="PauseMenu" unique_id=1201000012]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="PauseMenu/QuitPanel" unique_id=1201000013]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="VBox" type="VBoxContainer" parent="PauseMenu/QuitPanel/Panel" unique_id=1201000014]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="PauseMenu/QuitPanel/Panel/VBox" unique_id=1201000015]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_title")
+theme_override_font_sizes/font_size = 44
+text = "Quit?"
+horizontal_alignment = 1
+
+[node name="MainMenuQuit" type="Button" parent="PauseMenu/QuitPanel/Panel/VBox" unique_id=1201000016]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cdh0q")
+theme_override_font_sizes/font_size = 22
+text = "Quit to Main Menu"
+
+[node name="GameQuit" type="Button" parent="PauseMenu/QuitPanel/Panel/VBox" unique_id=1201000017]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cdh0q")
+theme_override_font_sizes/font_size = 22
+text = "Quit Game"
+
+[node name="QuitBack" type="Button" parent="PauseMenu/QuitPanel/Panel/VBox" unique_id=1201000018]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cdh0q")
+theme_override_font_sizes/font_size = 22
+text = "Back"
+
+[node name="StatBar" type="Control" parent="PauseMenu" unique_id=1201000019]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_64vob")
+
+[node name="Center" type="CenterContainer" parent="PauseMenu/StatBar" unique_id=1201000020]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="PauseMenu/StatBar/Center" unique_id=1201000021]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="VBox" type="VBoxContainer" parent="PauseMenu/StatBar/Center/Panel" unique_id=1201000022]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="PauseMenu/StatBar/Center/Panel/VBox" unique_id=1201000023]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_title")
+theme_override_font_sizes/font_size = 44
+text = "Stats"
+horizontal_alignment = 1
+
+[node name="PlaytimeLabel" type="Label" parent="PauseMenu/StatBar/Center/Panel/VBox" unique_id=1201000024]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cdh0q")
+theme_override_font_sizes/font_size = 22
+text = "Playtime: 00:00:00"
+horizontal_alignment = 1
+
+[node name="PuzzleCountLabel" type="Label" parent="PauseMenu/StatBar/Center/Panel/VBox" unique_id=1201000025]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cdh0q")
+theme_override_font_sizes/font_size = 22
+text = "Puzzles: 0 / 4"
+horizontal_alignment = 1
+
+[node name="StatBack" type="Button" parent="PauseMenu/StatBar/Center/Panel/VBox" unique_id=1201000026]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cdh0q")
+theme_override_font_sizes/font_size = 22
+text = "Back"

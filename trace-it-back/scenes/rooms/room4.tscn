@@ -1,0 +1,193 @@
+[gd_scene format=3 uid="uid://osrx0xoup2sa"]
+
+[ext_resource type="Texture2D" uid="uid://ditgm0g0v6kp2" path="res://assets/backgrounds/room_4.aseprite" id="1_3lk65"]
+[ext_resource type="Script" uid="uid://d2j8d3c7dbmq4" path="res://scripts/gdscripts/rooms/room_4.gd" id="1_ttfhd"]
+[ext_resource type="Texture2D" uid="uid://dlkvv7e4t0d3y" path="res://assets/items/door.aseprite" id="2_51wyk"]
+[ext_resource type="Texture2D" uid="uid://drw05i4nw7d5r" path="res://assets/items/livingroommat.aseprite" id="3_nojl6"]
+[ext_resource type="Script" uid="uid://ccbpovakcbeoi" path="res://scripts/gdscripts/interaction/InteractionObject.gd" id="4_0pl5x"]
+[ext_resource type="Texture2D" uid="uid://bysj7wmtirhhc" path="res://assets/items/tv.aseprite" id="4_ttfhd"]
+[ext_resource type="Texture2D" uid="uid://ds2op5b2keh3y" path="res://assets/items/couch.aseprite" id="5_0pl5x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_51wyk"]
+size = Vector2(1218, 479)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3lk65"]
+size = Vector2(20, 501)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xdd6j"]
+size = Vector2(20, 500)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qg7lp"]
+size = Vector2(1218, 164.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nojl6"]
+size = Vector2(1218, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_803qg"]
+size = Vector2(312, 71)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ttfhd"]
+a = Vector2(29, -1)
+b = Vector2(-35, -35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ttfhd"]
+size = Vector2(50, 21.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p718m"]
+size = Vector2(138, 85.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0pl5x"]
+size = Vector2(94, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3m3m"]
+size = Vector2(117, 49)
+
+[node name="Room4" type="Area2D" unique_id=922400755 groups=["player"]]
+script = ExtResource("1_ttfhd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1259349227]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_51wyk")
+
+[node name="Room4" type="Sprite2D" parent="." unique_id=1457519978]
+texture = ExtResource("1_3lk65")
+
+[node name="RoomBorder1" type="Area2D" parent="." unique_id=1110303564 groups=["player"]]
+position = Vector2(-619, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder1" unique_id=1931041395]
+position = Vector2(0, 9.5)
+shape = SubResource("RectangleShape2D_3lk65")
+
+[node name="RoomBorder2" type="Area2D" parent="." unique_id=119884749 groups=["player"]]
+position = Vector2(619, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder2" unique_id=145162091]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_xdd6j")
+
+[node name="RoomBorder3" type="StaticBody2D" parent="." unique_id=1171101904]
+position = Vector2(0, -188)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder3" unique_id=1082616091]
+position = Vector2(1, 15.75)
+shape = SubResource("RectangleShape2D_qg7lp")
+
+[node name="RoomBorder4" type="StaticBody2D" parent="." unique_id=1860515379]
+position = Vector2(0, 250)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder4" unique_id=1061691948]
+shape = SubResource("RectangleShape2D_nojl6")
+
+[node name="RoomBorder5" type="StaticBody2D" parent="." unique_id=899985049]
+position = Vector2(455, -84)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RoomBorder5" unique_id=432924731]
+position = Vector2(-1, 26)
+shape = SubResource("RectangleShape2D_803qg")
+
+[node name="RoomBorder6" type="StaticBody2D" parent="." unique_id=778095113]
+position = Vector2(269, -46)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RoomBorder6" unique_id=45798816]
+shape = SubResource("SegmentShape2D_ttfhd")
+
+[node name="Door" type="StaticBody2D" parent="." unique_id=1088550568]
+position = Vector2(453, 41)
+
+[node name="DoorSprite" type="Sprite2D" parent="Door" unique_id=1955766722]
+position = Vector2(0, -11)
+texture = ExtResource("2_51wyk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=1238545990]
+position = Vector2(0, -51.875)
+shape = SubResource("RectangleShape2D_ttfhd")
+
+[node name="InteractionBox" type="Area2D" parent="Door" unique_id=680759585]
+collision_layer = 2
+collision_priority = 2.0
+monitorable = false
+script = ExtResource("4_0pl5x")
+interaction_name = "ROOM4_FRONT_DOOR"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/InteractionBox" unique_id=1211573616 groups=["player"]]
+position = Vector2(-3, -11.875)
+shape = SubResource("RectangleShape2D_p718m")
+
+[node name="Couch" type="StaticBody2D" parent="." unique_id=910117584]
+position = Vector2(-145, 21)
+
+[node name="Couch" type="Sprite2D" parent="Couch" unique_id=1002739032]
+position = Vector2(13, -1)
+texture = ExtResource("5_0pl5x")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Couch" unique_id=1134878875]
+polygon = PackedVector2Array(1, 17, 8, 16, 9, 28, 58, -18, 58, -36, 64, -36, 68, -38, 69, -44, 61, -45, 58, -43, 26, -43, 26, -54, 28, -57, 28, -60, 26, -62, 21, -63, -13, -28, -42, 0, -42, 17)
+
+[node name="InteractionBox" type="Area2D" parent="Couch" unique_id=1159624929]
+collision_layer = 2
+collision_priority = 2.0
+monitorable = false
+script = ExtResource("4_0pl5x")
+interaction_name = "ROOM4_COUCH"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Couch/InteractionBox" unique_id=47242854 groups=["player"]]
+position = Vector2(-3, -11.875)
+shape = SubResource("RectangleShape2D_p718m")
+
+[node name="ExitRoom4" type="Area2D" parent="." unique_id=312006454 groups=["player"]]
+position = Vector2(-522, -83)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitRoom4" unique_id=1830375669]
+shape = SubResource("RectangleShape2D_0pl5x")
+
+[node name="Livingroommat" type="Sprite2D" parent="." unique_id=704737481]
+position = Vector2(76, 47)
+texture = ExtResource("3_nojl6")
+
+[node name="TV" type="StaticBody2D" parent="." unique_id=218363594]
+position = Vector2(68, -15)
+
+[node name="Tv" type="Sprite2D" parent="TV" unique_id=1502855565]
+position = Vector2(-3, -1)
+texture = ExtResource("4_ttfhd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TV" unique_id=829320583]
+position = Vector2(-2.5, -29.5)
+shape = SubResource("RectangleShape2D_h3m3m")
+
+[node name="InteractionBox" type="Area2D" parent="TV" unique_id=507266594]
+collision_layer = 2
+collision_priority = 2.0
+monitorable = false
+script = ExtResource("4_0pl5x")
+interaction_name = "ROOM4_TV"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TV/InteractionBox" unique_id=1770470779 groups=["player"]]
+position = Vector2(-3, -11.875)
+shape = SubResource("RectangleShape2D_p718m")
+
+[node name="SpawnPoints" type="Node" parent="." unique_id=2145339123 groups=["player"]]
+
+[node name="Default" type="Marker2D" parent="SpawnPoints" unique_id=263895394]
+position = Vector2(-523, 17)
+
+[node name="FromRoom3" type="Marker2D" parent="SpawnPoints" unique_id=1957993473]
+position = Vector2(-523, 28)
+
+[node name="FromBathroom" type="Marker2D" parent="SpawnPoints" unique_id=566461750]
+position = Vector2(-586, 143)
+
+[node name="FromComputerRoom" type="Marker2D" parent="SpawnPoints" unique_id=81761293]
+position = Vector2(595, 159)
+
+[node name="RoomBorder7" type="StaticBody2D" parent="." unique_id=101370919]
+position = Vector2(-442, -67)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RoomBorder7" unique_id=597587131]
+position = Vector2(1, 1)
+shape = SubResource("SegmentShape2D_ttfhd")
+
+[connection signal="body_entered" from="RoomBorder1" to="." method="_on_room_border_1_body_entered"]
+[connection signal="body_entered" from="RoomBorder2" to="." method="_on_room_border_2_body_entered"]
+[connection signal="body_entered" from="ExitRoom4" to="." method="_on_exit_room_4_body_entered"]

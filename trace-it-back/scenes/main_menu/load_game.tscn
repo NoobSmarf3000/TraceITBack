@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://b4fossi8x7x02"]
+
+[ext_resource type="Script" uid="uid://cf3yolo7htgyq" path="res://scripts/menu/load_game.gd" id="1_sient"]
+[ext_resource type="Texture2D" uid="uid://dw8j8x7rae03r" path="res://assets/backgrounds/rooftop.jpg" id="2_0fsfc"]
+[ext_resource type="FontFile" uid="uid://um2egfwsdklw" path="res://assets/texts/DeterminationSansWebRegular-369X.ttf" id="3_re6iq"]
+[ext_resource type="FontFile" uid="uid://carq468jgkgw2" path="res://assets/texts/CfBlackboardPersonalRegular-AKPg.ttf" id="3_sient"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sient"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q47vs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2tkqa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bpyrd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4cpf5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lhk3a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jr12c"]
+
+[node name="LoadGame" type="Control" unique_id=1037701463]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sient")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=562810318]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.5020001
+anchor_bottom = 1.5070001
+offset_right = -321.28003
+offset_bottom = -242.85303
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0fsfc")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=1798673015]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.492
+anchor_top = 0.17500001
+anchor_right = 0.492
+anchor_bottom = 0.17500001
+offset_left = -184.88
+offset_top = -33.825005
+offset_right = 185.12
+offset_bottom = 34.174995
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_sient")
+theme_override_font_sizes/font_size = 67
+text = "Load Game"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1437348222]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -220.0
+offset_top = 131.0
+offset_right = 220.0
+grow_horizontal = 2
+theme_override_constants/separation = 8
+
+[node name="Slot1" type="HBoxContainer" parent="VBoxContainer" unique_id=543686905]
+custom_minimum_size = Vector2(0, 82)
+layout_mode = 2
+
+[node name="Save1" type="Button" parent="VBoxContainer/Slot1" unique_id=750082618]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0, 0.36862746)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_re6iq")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sient")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q47vs")
+text = "Save 1"
+
+[node name="Delete1" type="Button" parent="VBoxContainer/Slot1" unique_id=212038106]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0, 0.36862746)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_re6iq")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sient")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q47vs")
+text = "Delete"
+
+[node name="Slot2" type="HBoxContainer" parent="VBoxContainer" unique_id=1501062354]
+custom_minimum_size = Vector2(0, 82)
+layout_mode = 2
+
+[node name="Save2" type="Button" parent="VBoxContainer/Slot2" unique_id=328216226]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0, 0.36862746)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_re6iq")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2tkqa")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bpyrd")
+text = "Save 2"
+
+[node name="Delete2" type="Button" parent="VBoxContainer/Slot2" unique_id=1488456365]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0, 0.36862746)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_re6iq")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sient")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q47vs")
+text = "Delete"
+
+[node name="Slot3" type="HBoxContainer" parent="VBoxContainer" unique_id=1281118085]
+custom_minimum_size = Vector2(0, 82)
+layout_mode = 2
+
+[node name="Save3" type="Button" parent="VBoxContainer/Slot3" unique_id=895928217]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0, 0.36862746)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_re6iq")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4cpf5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lhk3a")
+text = "Save 3"
+
+[node name="Delete3" type="Button" parent="VBoxContainer/Slot3" unique_id=2068802445]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0, 0.36862746)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_re6iq")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sient")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q47vs")
+text = "Delete"
+
+[node name="Back" type="Button" parent="VBoxContainer" unique_id=1377269930]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0, 0.36862746)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_re6iq")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jr12c")
+action_mode = 0
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/Slot1/Save1" to="." method="_on_save_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Slot1/Delete1" to="." method="_on_delete_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Slot2/Save2" to="." method="_on_save_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Slot2/Delete2" to="." method="_on_delete_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Slot3/Save3" to="." method="_on_save_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Slot3/Delete3" to="." method="_on_delete_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]

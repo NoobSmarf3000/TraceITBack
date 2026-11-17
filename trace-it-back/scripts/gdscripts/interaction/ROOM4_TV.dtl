@@ -1,0 +1,4 @@
+if {interactions._2nd_interaction_onwards} == "":
+	No time to watch now. You've got somethng to do today.
+else:
+	Again, no time for that now.
