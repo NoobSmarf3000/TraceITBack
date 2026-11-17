@@ -1,0 +1,24 @@
+join ACE center
+join Tyrone center
+ACE: Not bad! You've officially survived nested loops.
+Tyrone: My brain feels like it's tied in a knot. A loop inside a loop...
+ACE: Behind the scenes, your outer "for" loop started its first lap. But before it could finish, the inner loop had to run entirely from start to finish.
+ACE: It repeated that complete inner circle for every single lap of the outer loop.
+Tyrone: So the inside does all its work before the outside can move forward one step.
+ACE: You nailed it! You've learned all the pieces now.
+Tyrone: Does that mean... it's time for the final activity?
+do DialogueController.room_event("glitch", "glitch_2")
+update ACE
+[wait time="5.0"]
+ACE: _)(*R& PO&%Ev8c46uDTI CU%$^RVTF* __O)<OJPM:OJINYTFB*"})O*&^YTUFRET
+ACE: O&I%JVE&TCSRTRYU^ YMRTDVUJU HEEEEELP ) BOIUVT&RCX ^$JRD USZEHSTR MEEEEO&KEJ^S$R KER<&IFDUSZYE%HRJFTBUNPBL*V%K&SRU
+Tyrone: ...
+Tyrone: (He's getting worse... I really shouldn't make any more mistakes...)
+Tyrone: ???
+Tyrone: Are you glitching again?
+ACE: N-OUYdtv olydo no... I'm fine!
+Tyrone: ...
+Tyrone: (I'm not so sure about that...)
+ACE: & C%$WEU&K^URCE&#54e5c8x3w4ex3c45e8&@Q#$&%I^(*)MKU^CET&$U^I%&OR* CO%&I
+ACE: MUTVDKFBLG UBpO&%$EUI%-----
+[end_timeline]

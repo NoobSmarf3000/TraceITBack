@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bbowqw1fkj3kg"]
+
+[ext_resource type="PackedScene" uid="uid://6ba4k6gucjct" path="res://scenes/rooms/bedroom.tscn" id="1_geh4x"]
+
+[node name="Trace(it)back" type="Node2D" unique_id=263206437 groups=["player"]]
+
+[node name="Bedroom" parent="." unique_id=366456256 groups=["player"] instance=ExtResource("1_geh4x")]

@@ -1,0 +1,465 @@
+[gd_scene format=3 uid="uid://dep42iif5130f"]
+
+[ext_resource type="Script" uid="uid://cekhrc77i2cya" path="res://scripts/gdscripts/ace.gd" id="1_5yx1b"]
+[ext_resource type="SpriteFrames" uid="uid://bw83oaalisilc" path="res://assets/items/ACE_animations.aseprite" id="1_kejla"]
+[ext_resource type="AudioStream" uid="uid://c40s31yyblgjt" path="res://assets/audio/sfx/glitch.mp3" id="3_76ew8"]
+[ext_resource type="AudioStream" uid="uid://bm3qy8eoqt5j5" path="res://assets/audio/sfx/crash.mp3" id="3_wmvm2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3uja7"]
+size = Vector2(33, 23)
+
+[sub_resource type="Animation" id="Animation_kejla"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ACE_Animations:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"talk_1"]
+}
+
+[sub_resource type="Animation" id="Animation_5yx1b"]
+length = 15.179941
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ACE_Animations:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15.033334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [&"crash", &"crash"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ACE_Animations:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0009999999, 0.03433336, 0.067666665, 0.1, 0.101000026, 0.13433333, 0.16766669, 0.2, 0.20099999, 0.23433335, 0.3, 0.4, 0.5, 0.53333336, 0.56666666, 0.6, 0.6333333, 0.6666667, 0.7, 0.73333335, 0.76666665, 0.8, 0.8333334, 0.8666667, 0.90000004, 0.93333334, 0.9666667, 1, 1.0333333, 1.0666667, 1.1000001, 1.1333334, 1.1666667, 1.2, 1.2333333, 1.2666667, 1.3000001, 1.3333334, 1.3666668, 1.4000001, 1.4333334, 1.4666667, 1.5, 1.5333333, 1.5666667, 1.6035484, 1.6045485, 1.6378818, 1.671215, 1.7035484, 1.7045485, 1.7378818, 1.7712151, 1.8035485, 1.8045484, 1.8378818, 1.9035485, 2.0035484, 2.1035485, 2.1368818, 2.1702151, 2.2035484, 2.2368817, 2.270215, 2.3035483, 2.3368816, 2.370215, 2.4035485, 2.4368818, 2.470215, 2.5035484, 2.5368817, 2.5702152, 2.6035485, 2.6368818, 2.6702151, 2.7035484, 2.7368817, 2.770215, 2.8035483, 2.8368816, 2.870215, 2.9035485, 2.9368818, 2.9702153, 3.0035486, 3.036882, 3.0702152, 3.1035485, 3.1368818, 3.1702151, 6.0446157, 13.3, 13.5, 13.666667, 13.833333, 14.766666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 5, 6, 7, 1, 8, 9, 10, 2, 11, 12, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 5, 6, 7, 8, 9, 10, 11, 12, 5, 6, 7, 8, 9, 10, 11, 12, 5, 6, 7, 8, 9, 10, 11, 12, 0, 5, 6, 7, 1, 8, 9, 10, 2, 11, 12, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 5, 6, 7, 8, 9, 10, 11, 12, 5, 6, 7, 8, 9, 10, 11, 12, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_wmvm2")
+}],
+"times": PackedFloat32Array(13.240662)
+}
+tracks/2/use_blend = true
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.51553017,
+"start_offset": 0.0,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.6312147,
+"start_offset": 0.13321245,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.51553017,
+"start_offset": 0.3645815,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.84505576,
+"start_offset": 0.0,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.6277091,
+"start_offset": 0.0,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.51553017,
+"start_offset": 0.0,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.51553017,
+"start_offset": 0.0,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.6209795,
+"start_offset": 0.0,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.51553017,
+"start_offset": 0.0,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.6312147,
+"start_offset": 0.13321245,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.51553017,
+"start_offset": 0.3645815,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.84505576,
+"start_offset": 0.0,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.6277091,
+"start_offset": 0.0,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.51553017,
+"start_offset": 0.0,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.51553017,
+"start_offset": 0.0,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.6209795,
+"start_offset": 0.0,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.51553017,
+"start_offset": 0.0,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.6312147,
+"start_offset": 0.13321245,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.51553017,
+"start_offset": 0.3645815,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.84505576,
+"start_offset": 0.0,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.6277091,
+"start_offset": 0.0,
+"stream": ExtResource("3_76ew8")
+}, {
+"end_offset": 0.51553017,
+"start_offset": 0.0,
+"stream": ExtResource("3_76ew8")
+}],
+"times": PackedFloat32Array(-0.015503764, 0.09667519, 0.24391001, 0.3911448, 0.57343554, 0.997612, 1.3121895, 1.8739836, 2.2955751, 2.4077542, 2.5549889, 2.7022238, 2.8845143, 3.308691, 3.6232684, 4.1850624, 4.6225924, 4.7347713, 4.882006, 5.029241, 5.2115316, 5.6357083)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_l1jtt"]
+resource_name = "crash_2"
+length = 1.69
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ACE_Animations:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.6533341),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [&"crash", &"crash"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ACE_Animations:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.19999981, 0.3666668, 0.5333328, 1.4666662),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [15, 16, 17, 18, 19]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_wmvm2")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_76ew8"]
+length = 0.30102834
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ACE_Animations:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.30085257),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [&"glitch_1", &"glitch_1"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ACE_Animations:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.6373,
+"start_offset": 0.0,
+"stream": ExtResource("3_76ew8")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_wmvm2"]
+length = 0.33333334
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ACE_Animations:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3319313),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [&"glitch_2", &"glitch_2"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ACE_Animations:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.6174,
+"start_offset": 0.0,
+"stream": ExtResource("3_76ew8")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_gv4mg"]
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ACE_Animations:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ACE_Animations:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_dh585"]
+length = 0.033333335
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ACE_Animations:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [&"off"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ACE_Animations:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_p62wf"]
+length = 0.53333336
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ACE_Animations:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.53333336),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [&"talk_1", &"talk_1"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ACE_Animations:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_qtp0b"]
+length = 0.8666667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ACE_Animations:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [&"talk_2", &"talk_2"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ACE_Animations:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3, 0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_g2k1s"]
+resource_name = "turning_on"
+length = 5.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ACE_Animations:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.16666667, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [&"turning_on", &"turning_on"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ACE_Animations:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(-0.1, 0.19999999, 1.2333333, 2.1666667, 3.2, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l1jtt"]
+_data = {
+&"RESET": SubResource("Animation_kejla"),
+&"crash": SubResource("Animation_5yx1b"),
+&"crash_2": SubResource("Animation_l1jtt"),
+&"glitch_1": SubResource("Animation_76ew8"),
+&"glitch_2": SubResource("Animation_wmvm2"),
+&"idle": SubResource("Animation_gv4mg"),
+&"off": SubResource("Animation_dh585"),
+&"talk_1": SubResource("Animation_p62wf"),
+&"talk_2": SubResource("Animation_qtp0b"),
+&"turning_on": SubResource("Animation_g2k1s")
+}
+
+[node name="ACE" type="StaticBody2D" unique_id=60372730]
+script = ExtResource("1_5yx1b")
+
+[node name="ACE_Animations" type="AnimatedSprite2D" parent="." unique_id=798332927]
+sprite_frames = ExtResource("1_kejla")
+animation = &"talk_1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1038667508]
+position = Vector2(-7.5, -24.5)
+shape = SubResource("RectangleShape2D_3uja7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=613206726]
+libraries/ = SubResource("AnimationLibrary_l1jtt")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=638600282]
+volume_db = -30.419
+bus = &"SFX"

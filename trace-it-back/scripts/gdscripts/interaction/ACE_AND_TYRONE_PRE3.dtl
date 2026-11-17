@@ -1,0 +1,12 @@
+join ACE center
+join Tyrone center
+ACE: Now that we have boxes to store things, let's play with what's inside them.
+ACE: We can stitch Strings together using the plus (+) sign. That's called concatenation.
+Tyrone: So adding words together like a sentence?
+ACE: Right! And for numbers, Java has a built-in Math tool for finding the highest number, square roots, and all sorts of things.
+ACE: Lastly, we have Booleans. They are the simplest data type: just true or false.
+Tyrone: True or false. Sounds like setting up for a trick question.
+ACE: No tricks, no surprises, just logic! Everything in computing eventually boils down to true or false.
+ACE: Read and answer carefully, drag the right words, and keep an eye on your mistakes.
+Tyrone: Okay. Let's do this.
+[end_timeline]

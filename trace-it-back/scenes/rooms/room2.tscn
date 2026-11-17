@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://jvrqgj1b2t6i"]
+
+[ext_resource type="Script" uid="uid://bvbubhq7oy2f" path="res://scripts/gdscripts/rooms/room_2.gd" id="1_aok5s"]
+[ext_resource type="Texture2D" uid="uid://c3om21g5h80db" path="res://assets/backgrounds/room_2.aseprite" id="1_s5msr"]
+[ext_resource type="Texture2D" uid="uid://buxge5d6nx1r7" path="res://assets/items/diningtable.aseprite" id="2_4w0uv"]
+[ext_resource type="Script" uid="uid://ccbpovakcbeoi" path="res://scripts/gdscripts/interaction/InteractionObject.gd" id="4_6mao5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5msr"]
+size = Vector2(640, 330)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4w0uv"]
+size = Vector2(20, 501)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aok5s"]
+size = Vector2(20, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mao5"]
+size = Vector2(1218, 150)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tp2jb"]
+size = Vector2(1218, 20)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6mao5"]
+radius = 28.122242
+height = 306.00488
+
+[node name="Room2" type="Area2D" unique_id=1702864422 groups=["player"]]
+script = ExtResource("1_aok5s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=294519217]
+shape = SubResource("RectangleShape2D_s5msr")
+
+[node name="Room2" type="Sprite2D" parent="." unique_id=987184030]
+texture = ExtResource("1_s5msr")
+
+[node name="RoomBorder1" type="Area2D" parent="." unique_id=1822125138 groups=["player"]]
+position = Vector2(-330, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder1" unique_id=739164370]
+shape = SubResource("RectangleShape2D_4w0uv")
+
+[node name="RoomBorder2" type="StaticBody2D" parent="." unique_id=1807899090]
+position = Vector2(332, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder2" unique_id=358645884]
+position = Vector2(-3, 0)
+shape = SubResource("RectangleShape2D_aok5s")
+
+[node name="RoomBorder3" type="StaticBody2D" parent="." unique_id=53488127]
+position = Vector2(0, -165)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder3" unique_id=455129174]
+position = Vector2(3, 21)
+shape = SubResource("RectangleShape2D_6mao5")
+
+[node name="RoomBorder4" type="StaticBody2D" parent="." unique_id=1065207654]
+position = Vector2(0, 165)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder4" unique_id=116368078]
+shape = SubResource("RectangleShape2D_tp2jb")
+
+[node name="DiningTable" type="StaticBody2D" parent="." unique_id=564396304]
+position = Vector2(0, 31)
+
+[node name="Diningtable" type="Sprite2D" parent="DiningTable" unique_id=469146529]
+position = Vector2(0, 1)
+texture = ExtResource("2_4w0uv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DiningTable" unique_id=225053396]
+position = Vector2(0, -1)
+polygon = PackedVector2Array(-138, -9, -138, -5, -124, 3, -78, 10, -56, 9, -29, 11, 46, 12, 91, 9, 103, 8, 112, 6, 123, 4, 136, -2, 136, -9, 133, -12, 115, -18, 80, -23, 31, -26, -33, -26, -82, -23, -106, -20, -131, -14)
+
+[node name="InteractionBox" type="Area2D" parent="DiningTable" unique_id=1860856869]
+position = Vector2(0, 23)
+collision_layer = 2
+collision_priority = 2.0
+monitorable = false
+script = ExtResource("4_6mao5")
+interaction_name = "ROOM2_DINING_TABLE"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DiningTable/InteractionBox" unique_id=30951634 groups=["player"]]
+position = Vector2(0, -26)
+rotation = -4.7093945
+shape = SubResource("CapsuleShape2D_6mao5")
+
+[node name="SpawnPoints" type="Node" parent="." unique_id=1598348317 groups=["player"]]
+
+[node name="Default" type="Marker2D" parent="SpawnPoints" unique_id=1706558289]
+position = Vector2(-294, 87)
+
+[node name="FromRoom3" type="Marker2D" parent="SpawnPoints" unique_id=1081440512]
+position = Vector2(-294, 87)
+
+[connection signal="body_entered" from="RoomBorder1" to="." method="_on_room_border_1_body_entered"]

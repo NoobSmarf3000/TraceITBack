@@ -1,0 +1,28 @@
+join ACE center 
+join Tyrone center
+ACE: Not bad...
+Tyrone: Woah...
+Tyrone: I'm wondering how it works right now...
+ACE: Let me show you what Java did behind the scenes.
+ACE: It started at main and read your line. System.out.println told it to print something.
+ACE: Then it took whatever sat between the quotation marks, exactly as it was, and sent it to the screen.
+Tyrone: So the words in quotes are the message itself.
+ACE: Exactly! And the semicolon told Java that this instruction was finished.
+Tyrone: What if I forget it?
+Tyrone: (I probably forgot it at least five times or less...)
+ACE: Then Java stops with an error before printing anything. Computers are very literal.
+ACE: That's why those slips are worth learning from. One missing character can break the whole program.
+Tyrone: Quotes for the message, semicolon to end the line. Got it.
+Tyrone: I have this gut thought this actually gets harder the further it goes...
+ACE: At least you're learning, right?
+Tyrone: ...
+Tyrone: ...yeah, I guess so.
+Tyrone: Hopefully I couldn't forget this too.
+ACE: Now,
+ACE: If you want to take a break, you can tell me now
+ACE: But if you're willing to continue forth to what we'll be doing later, are you ready for it?
+- Yes
+- Maybe later
+	set {chapter_one.continue_puzzle.Later} = "Later"
+[end_timeline]
+[end_timeline]

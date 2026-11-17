@@ -1,0 +1,19 @@
+join ACE center
+join Tyrone center
+ACE: Not bad. Honestly, that was the hardest one.
+Tyrone: Woah... I actually got through it.
+Tyrone: But I want to know how it decided which path to take.
+ACE: Behind the scenes, the "if" statement checked your condition. Since it was true, it ran that specific block of code.
+ACE: The "else" and "else if" blocks were completely ignored. Java only ever takes one road.
+ACE: And for the "switch", it just looked at the variable and jumped straight to the matching case.
+Tyrone: So one condition wins, and the rest get skipped.
+ACE: You've got it, buddy. That's control flow. You tell the program how to think.
+ACE: And every slip you made along the way taught you something.
+Tyrone: Okay... I think I could actually explain this to somebody.
+ACE: Now,
+ACE: If you want to take a break, you can tell me now
+ACE: But if you're willing to continue to While and Do-While Loops, are you ready for it?
+- Yes
+- Maybe later
+	set {chapter_one.continue_puzzle.Later} = "Later"
+[end_timeline]

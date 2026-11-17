@@ -1,0 +1,24 @@
+join ACE center
+join Tyrone center
+ACE: Alright, first things first.
+ACE: Every Java program lives inside something called a class.
+ACE: Inside it is main, which is the front door of the program. Java walks in there and reads each line from top to bottom.
+Tyrone: Top to bottom. One line at a time.
+ACE: Right. To show something on the screen, we use System.out.println.
+ACE: Whatever you put between the quotation marks gets printed exactly as it is.
+ACE: And every instruction ends with a semicolon, so Java knows where it stops.
+Tyrone: Quotes for the message, semicolon at the end...
+Tyrone: That doesn't sound too bad.
+ACE: Your task is simple. Drag the words into the empty spots so the program prints Hello World.
+ACE: And there are also other other types of questions too!
+ACE: I made them as puzzles for you to solve to kick things up a notch.
+ACE: There's also the Reset button, which clears the spots (and your mistakes) if you get stuck. And the timer at the top only runs while you're actually solving.
+ACE: Oh, and a little warning. You're only allowed seven mistakes.
+ACE: Annnd, three strikes. Each strike is from each of your seven mistakes.
+Tyrone: ...And what if I make seven, or even lose all three?
+ACE: Let's just say there are consequences...
+Tyrone: (Why does that sound so ominous?)
+ACE: But don't worry, you've got a traceback to know where and when you've made a mistake.
+ACE: From there, you can see what went wrong and why.
+ACE: Now let's get on with it, shall we?
+[end_timeline]

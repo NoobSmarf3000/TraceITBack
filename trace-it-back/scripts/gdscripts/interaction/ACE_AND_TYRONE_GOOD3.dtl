@@ -1,0 +1,19 @@
+join ACE center
+join Tyrone center
+Tyrone: ...So that's how it goes.
+ACE: Yep!
+ACE: I can see you're getting the hang of it, so far.
+Tyrone: Yeah...
+Tyrone: Frankly speaking, it already scares me how good I could be at this...
+Tyrone: But as much I don't want to envision it...
+Tyrone: I'm guessing at this point we're going for the real deal this time.
+ACE: On that, you're right.
+ACE: We're going to master Conditional Statements and Switches!
+Tyrone: Oh...
+Tyrone: Wait-
+Tyrone: THAT QUICK?
+ACE: I mean, it's up to you if you want to continue or not.
+- Yes
+- Maybe later
+	set {chapter_one.continue_puzzle.Later} = "Later"
+[end_timeline]

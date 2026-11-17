@@ -1,0 +1,4 @@
+if {interactions._2nd_interaction_onwards} == "":
+	You may not become a couch potato right now, you've got something to do today.
+else:
+	Again, no time for that now.

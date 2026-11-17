@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://cohst4xxg8v1q"]
+
+[ext_resource type="Script" uid="uid://bdn0slv3343p4" path="res://scripts/gdscripts/rooms/bathroom.gd" id="1_w4rbc"]
+[ext_resource type="Texture2D" uid="uid://cvpyhlfaa4j2n" path="res://assets/backgrounds/bathroom.aseprite" id="1_y5w4s"]
+[ext_resource type="Texture2D" uid="uid://ccycc3d3jo530" path="res://assets/items/bathroomsink.aseprite" id="2_8pl6i"]
+[ext_resource type="Texture2D" uid="uid://dr73joeq0lsyq" path="res://assets/items/showertub.aseprite" id="3_ur823"]
+[ext_resource type="Script" uid="uid://ccbpovakcbeoi" path="res://scripts/gdscripts/interaction/InteractionObject.gd" id="4_dfe1a"]
+[ext_resource type="Texture2D" uid="uid://y4jg07gxnjgl" path="res://assets/items/toilet.aseprite" id="4_ur823"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e0elq"]
+size = Vector2(639, 288)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y5w4s"]
+size = Vector2(20, 501)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8pl6i"]
+size = Vector2(20, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ur823"]
+size = Vector2(1080, 176)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4rbc"]
+size = Vector2(1218, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfe1a"]
+size = Vector2(127, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nc0wo"]
+size = Vector2(83, 85.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_won8x"]
+size = Vector2(135.00076, 177.00142)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_muy8a"]
+size = Vector2(52, 14)
+
+[node name="Bathroom" type="Area2D" unique_id=1786549036 groups=["player"]]
+script = ExtResource("1_w4rbc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2114477611]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_e0elq")
+
+[node name="Bathroom" type="Sprite2D" parent="." unique_id=1075585612]
+texture = ExtResource("1_y5w4s")
+
+[node name="RoomBorder1" type="StaticBody2D" parent="." unique_id=1458726724]
+position = Vector2(-330, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder1" unique_id=675582692]
+position = Vector2(0, 9.5)
+shape = SubResource("RectangleShape2D_y5w4s")
+
+[node name="RoomBorder2" type="Area2D" parent="." unique_id=434872127 groups=["player"]]
+position = Vector2(331, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder2" unique_id=734533369]
+position = Vector2(-3, 0)
+shape = SubResource("RectangleShape2D_8pl6i")
+
+[node name="RoomBorder3" type="StaticBody2D" parent="." unique_id=1049376730]
+position = Vector2(0, -160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder3" unique_id=1536575035]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_ur823")
+
+[node name="RoomBorder4" type="StaticBody2D" parent="." unique_id=1533439824]
+position = Vector2(0, 151)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder4" unique_id=699297709]
+shape = SubResource("RectangleShape2D_w4rbc")
+
+[node name="Sink" type="StaticBody2D" parent="." unique_id=1886026689]
+position = Vector2(176, 7)
+
+[node name="Bathroomsink" type="Sprite2D" parent="Sink" unique_id=335926643]
+position = Vector2(0, -8)
+texture = ExtResource("2_8pl6i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sink" unique_id=821149280]
+position = Vector2(0.5, -47.5)
+shape = SubResource("RectangleShape2D_dfe1a")
+
+[node name="InteractionBox" type="Area2D" parent="Sink" unique_id=418888940]
+collision_layer = 2
+collision_priority = 2.0
+monitorable = false
+script = ExtResource("4_dfe1a")
+interaction_name = "BATHROOM_SINK"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sink/InteractionBox" unique_id=127946792 groups=["player"]]
+position = Vector2(-3, -11.875)
+shape = SubResource("RectangleShape2D_nc0wo")
+
+[node name="Bathtub" type="StaticBody2D" parent="." unique_id=355638338]
+position = Vector2(-209, 48)
+
+[node name="Showertub" type="Sprite2D" parent="Bathtub" unique_id=355565113]
+position = Vector2(-13, -46)
+texture = ExtResource("3_ur823")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bathtub" unique_id=505131488]
+polygon = PackedVector2Array(-39, -15, -28, -15, -5, -15, 24, -15, 50, -15, 59, -24, 69, -34, 43, -34, 26, -34, 26, -50, 18, -50, 14, -65, 8, -94, 8, -105, 13, -115, 7, -122, -1, -122, -7, -117, -7, -109, -3, -106, -2, -100, 1, -97, 4, -75, 7, -60, 10, -46, 13, -42, 7, -34, -85, -34, -97, -25, -110, -14)
+
+[node name="InteractionBox" type="Area2D" parent="Bathtub" unique_id=505425590]
+position = Vector2(36, 10)
+rotation = 0.14988789
+collision_layer = 2
+collision_priority = 2.0
+monitorable = false
+script = ExtResource("4_dfe1a")
+interaction_name = "BATHROOM_SHOWERTUB"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bathtub/InteractionBox" unique_id=520727695]
+position = Vector2(-50.577507, 6.6269035)
+rotation = 1.4201744
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_won8x")
+
+[node name="Toilet" type="StaticBody2D" parent="." unique_id=878190060]
+position = Vector2(-60, 18)
+
+[node name="Toilet" type="Sprite2D" parent="Toilet" unique_id=221495147]
+texture = ExtResource("4_ur823")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Toilet" unique_id=1393083650]
+position = Vector2(0, -41)
+shape = SubResource("RectangleShape2D_muy8a")
+
+[node name="InteractionBox" type="Area2D" parent="Toilet" unique_id=757307402]
+collision_layer = 2
+collision_priority = 2.0
+monitorable = false
+script = ExtResource("4_dfe1a")
+interaction_name = "TOILET"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Toilet/InteractionBox" unique_id=440888604 groups=["player"]]
+position = Vector2(-9.5, -11.875)
+shape = SubResource("RectangleShape2D_nc0wo")
+
+[node name="SpawnPoints" type="Node" parent="." unique_id=1148003398 groups=["player"]]
+
+[node name="Default" type="Marker2D" parent="SpawnPoints" unique_id=925867643]
+position = Vector2(0, 80)
+
+[node name="FromRoom4" type="Marker2D" parent="SpawnPoints" unique_id=1016965945]
+position = Vector2(289, 96)
+
+[connection signal="body_entered" from="RoomBorder2" to="." method="_on_room_border_2_body_entered"]

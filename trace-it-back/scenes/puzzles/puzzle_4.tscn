@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://dyhsefi1bawbb"]
+
+[ext_resource type="Script" uid="uid://jncw8n1lhtxv" path="res://scripts/gdscripts/puzzles/puzzle_4.gd" id="1_rak80"]
+[ext_resource type="FontFile" uid="uid://7e4y6hdw2c0t" path="res://assets/texts/consolas.ttf" id="2_ecg83"]
+[ext_resource type="PackedScene" uid="uid://bctkchfnb38dc" path="res://scenes/puzzles/word_bank.tscn" id="3_4bcmt"]
+[ext_resource type="PackedScene" uid="uid://8xfgas6ff5yh" path="res://scenes/puzzles/code_panel.tscn" id="4_h71og"]
+
+[node name="Puzzle4" type="Control" unique_id=303048816]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rak80")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=630593132]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12572142, 0.22117376, 0.35659087, 1)
+
+[node name="MainPanel" type="Panel" parent="." unique_id=1651803169]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="Control" parent="." unique_id=1104108545]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 0.13100001
+offset_bottom = 0.11999512
+grow_horizontal = 2
+
+[node name="PuzzleTitle" type="Label" parent="Header" unique_id=379214719]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.18800001
+anchor_right = 0.512
+anchor_bottom = 0.873
+offset_left = 7.6799927
+offset_right = -7.680023
+offset_bottom = -28.999
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ecg83")
+theme_override_font_sizes/font_size = 25
+text = "Under different
+conditions"
+horizontal_alignment = 1
+
+[node name="Timer" type="Label" parent="Header" unique_id=1926135286]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.125
+anchor_bottom = 0.762
+offset_bottom = -0.006000519
+theme_override_font_sizes/font_size = 30
+
+[node name="Instructions" type="Label" parent="Header" unique_id=956305233]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.60800004
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.120025635
+offset_bottom = 1.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("2_ecg83")
+theme_override_font_sizes/font_size = 11
+text = "1. Drag the following words to the
+empty spots
+2. You're only allowed 7 mistakes,
+but if you do so, there's consequences"
+
+[node name="WordBank" parent="." unique_id=760408880 instance=ExtResource("3_4bcmt")]
+layout_mode = 1
+
+[node name="CodePanel" parent="." unique_id=538590535 instance=ExtResource("4_h71og")]
+layout_mode = 1
+offset_top = -1.1600037
+offset_bottom = 7.159973
+
+[node name="OutputPanel" type="Panel" parent="." unique_id=46814485]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.512
+anchor_top = 0.15
+anchor_right = 1.0
+anchor_bottom = 0.70000005
+offset_left = 0.3199768
+offset_bottom = -3.0517578e-05
+
+[node name="OutputTitle" type="Label" parent="OutputPanel" unique_id=553781724]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.15300001
+offset_right = 8.0
+offset_bottom = -0.3920021
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ecg83")
+text = "Output"
+horizontal_alignment = 1
+
+[node name="OutputText" type="Label" parent="OutputPanel" unique_id=1735565943]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.18400002
+anchor_right = 0.99700004
+anchor_bottom = 1.0
+offset_top = -0.104003906
+offset_right = -0.04901123
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Feedback" type="Label" parent="." unique_id=1156186109]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.512
+anchor_top = 0.70000005
+anchor_right = 1.0
+anchor_bottom = 0.8
+offset_left = 0.3199768
+offset_top = -3.0517578e-05
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_ecg83")
+horizontal_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="." unique_id=1307333118]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35900003
+anchor_top = 0.883
+anchor_right = 0.675
+anchor_bottom = 0.96700007
+offset_left = 0.23999023
+offset_top = 0.16000366
+offset_bottom = -0.16003418
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="WordBankButton" type="Button" parent="Buttons" unique_id=199811588]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ecg83")
+theme_override_font_sizes/font_size = 30
+text = "Word Bank"
+
+[node name="Reset" type="Button" parent="Buttons" unique_id=577400161]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_ecg83")
+theme_override_font_sizes/font_size = 30
+text = "Reset"
+
+[node name="Submit" type="Button" parent="Buttons" unique_id=1107248448]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_ecg83")
+theme_override_font_sizes/font_size = 30
+text = "Submit"
+icon_alignment = 1

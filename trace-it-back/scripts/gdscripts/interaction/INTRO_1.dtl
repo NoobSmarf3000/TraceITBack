@@ -1,0 +1,27 @@
+if {interactions.last_interacted} != "":
+	jump INTRO_RETURN/
+else:
+	We haven't met before, have we?
+	Well, don't mind me.
+	I'm just the intro of what you'll later be playing.
+	In a few moments,
+	you'll wonder why...
+	[wait time="5.0"]
+	Now let me say one thing
+	If you ever decide to start now,
+	I'll be looking out for you from here on out.
+	I’ll be looking out what you’ve done, what you’ve learned, and how much you’ll have fun, okay bud?
+	If you aren’t fine with games such as mine,
+	then go look and ask yourself ‘why?’
+	Hey, I’m breaking the 4th wall here.
+	It’s me, the game itself talking to you, player.
+	I’m also here to see how much you’ve learned from either me, your computer, but before me, your computing-subject-related teacher,
+	and to see how much fun we might have in these next seconds that we might share together.
+	Got it?
+	Hopefully some of y’all would get into the industry, and further shapes up and spins it around towards places no one else would think of.
+	Like my creator, he’s a…
+	...well, let’s just say, he’s a bit of a handful, but here I am, a functioning system built to diddle-daddle with you. \:P
+	[wait time="3.0"]
+	...I guess it’s my cue.
+	Have fun! ;)
+	[end_timeline]

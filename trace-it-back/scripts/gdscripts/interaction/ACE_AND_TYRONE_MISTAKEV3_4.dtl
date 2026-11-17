@@ -1,0 +1,12 @@
+join ACE center 
+join Tyrone center
+Tyrone: I guess I messed up way too much...
+do DialogueController.room_event("glitch", "glitch_2")
+update ACE
+[wait time="10.0"]
+ACE: PG&(RVEOV*&(\:TROC$^SIE%RK 665W&CUI CKJUHYES
+ACE: C@#$%IE&#$ %I %7434 u56W#XCI*c67e5$I &^ OEiv76to(&TO*
+Tyrone: ...
+Tyrone: (I have to do something before this haywired ACE actually blows my PC up...)
+[wait time="10.0"]
+[end_timeline]

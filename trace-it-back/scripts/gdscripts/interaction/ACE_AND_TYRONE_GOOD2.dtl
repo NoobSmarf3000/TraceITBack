@@ -1,0 +1,16 @@
+join ACE center
+ACE: Well done.
+join Tyrone center
+Tyrone: Alright.
+Tyrone: Though it might look easy now, I know for sure it gets harder and harder later.
+ACE: At least you're learning, right?
+Tyrone: ...
+Tyrone: ...yeah, I guess so.
+Tyrone: Hopefully I couldn't forget this too.
+ACE: Now,
+ACE: If you want to take a break, you can tell me now.
+ACE: But if you're willing to continue forth to what we'll be doing later, are you ready for it?
+- Yes
+- Maybe later
+	set {chapter_one.continue_puzzle.Later} = "Later"
+[end_timeline]

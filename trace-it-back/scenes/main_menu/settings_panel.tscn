@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://47jrwh5h63d4"]
+
+[ext_resource type="Script" uid="uid://65rmcp86fs6e" path="res://scripts/menu/settings_panel.gd" id="1_ev5he"]
+[ext_resource type="FontFile" uid="uid://carq468jgkgw2" path="res://assets/texts/CfBlackboardPersonalRegular-AKPg.ttf" id="1_ys8gc"]
+[ext_resource type="FontFile" uid="uid://dbd8pewjsdpi2" path="res://assets/texts/DeterminationMonoWebRegular-Z5oq.ttf" id="2_lsrvi"]
+[ext_resource type="FontFile" uid="uid://um2egfwsdklw" path="res://assets/texts/DeterminationSansWebRegular-369X.ttf" id="4_elusd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+content_margin_left = 28.0
+content_margin_top = 20.0
+content_margin_right = 28.0
+content_margin_bottom = 24.0
+bg_color = Color(0.3764706, 0, 0.019607844, 0.34901962)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.62, 0.52, 0.82, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="SettingsPanel" type="Control" unique_id=1037701463]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ev5he")
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1101000001]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="Center" unique_id=1101000002]
+custom_minimum_size = Vector2(470, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="VBox" type="VBoxContainer" parent="Center/Panel" unique_id=1101000003]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="Center/Panel/VBox" unique_id=1101000004]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ys8gc")
+theme_override_font_sizes/font_size = 56
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="MasterRow" type="HBoxContainer" parent="Center/Panel/VBox" unique_id=1101000005]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="MasterLabel" type="Label" parent="Center/Panel/VBox/MasterRow" unique_id=1101000006]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_elusd")
+theme_override_font_sizes/font_size = 20
+text = "Master Volume"
+
+[node name="Master" type="HSlider" parent="Center/Panel/VBox/MasterRow" unique_id=1101000007]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="MasterValue" type="Label" parent="Center/Panel/VBox/MasterRow" unique_id=1101000008]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(54, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_elusd")
+theme_override_font_sizes/font_size = 20
+text = "100%"
+horizontal_alignment = 2
+
+[node name="MusicRow" type="HBoxContainer" parent="Center/Panel/VBox" unique_id=1101000009]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="MusicLabel" type="Label" parent="Center/Panel/VBox/MusicRow" unique_id=1101000010]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_elusd")
+theme_override_font_sizes/font_size = 20
+text = "Music"
+
+[node name="Music" type="HSlider" parent="Center/Panel/VBox/MusicRow" unique_id=1101000011]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="MusicValue" type="Label" parent="Center/Panel/VBox/MusicRow" unique_id=1101000012]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(54, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_elusd")
+theme_override_font_sizes/font_size = 20
+text = "100%"
+horizontal_alignment = 2
+
+[node name="SFXRow" type="HBoxContainer" parent="Center/Panel/VBox" unique_id=1101000013]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SFXLabel" type="Label" parent="Center/Panel/VBox/SFXRow" unique_id=1101000014]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_elusd")
+theme_override_font_sizes/font_size = 20
+text = "SFX"
+
+[node name="SFX" type="HSlider" parent="Center/Panel/VBox/SFXRow" unique_id=1101000015]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="SFXValue" type="Label" parent="Center/Panel/VBox/SFXRow" unique_id=1101000016]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(54, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_elusd")
+theme_override_font_sizes/font_size = 20
+text = "100%"
+horizontal_alignment = 2
+
+[node name="Back" type="Button" parent="Center/Panel/VBox" unique_id=1101000017]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_lsrvi")
+theme_override_font_sizes/font_size = 26
+text = "Back"

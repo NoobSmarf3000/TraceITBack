@@ -1,0 +1,16 @@
+join ACE center
+ACE: Alrighty!
+join Tyrone center
+Tyrone: This one got me spinning...
+ACE: And the next one for sure will make you spin harder.
+ACE: Because we're doing loops! And putting loops inside of loops!
+Tyrone: Oh great. Loop inception.
+ACE: Yep. A loop only does something if what is said in the structure of its code follows it.
+Tyrone: So as long as it's true?
+ACE: Correct!
+ACE: We're starting with "while" and "do" loops first.
+ACE: Take a breather if you need to!
+- Yes
+- Maybe later
+	set {chapter_one.continue_puzzle.Later} = "Later"
+[end_timeline]

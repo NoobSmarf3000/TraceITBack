@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://0esr8l7r63qh"]
+
+[ext_resource type="Texture2D" uid="uid://xrfqnjfcx7lp" path="res://assets/backgrounds/room_3.aseprite" id="1_qv21c"]
+[ext_resource type="Script" uid="uid://bh1mcjxm3xm0g" path="res://scripts/gdscripts/rooms/room_3.gd" id="1_uupts"]
+[ext_resource type="Texture2D" uid="uid://dlkvv7e4t0d3y" path="res://assets/items/door.aseprite" id="2_dk4yb"]
+[ext_resource type="Texture2D" uid="uid://c3avcyrvybjrw" path="res://assets/items/kitchen1.aseprite" id="3_u63ts"]
+[ext_resource type="Texture2D" uid="uid://by5qpcboxolq0" path="res://assets/items/cooking_range.aseprite" id="4_2dixu"]
+[ext_resource type="Texture2D" uid="uid://wqo4r5vk3n5d" path="res://assets/items/fridge.aseprite" id="5_uupts"]
+[ext_resource type="Script" uid="uid://ccbpovakcbeoi" path="res://scripts/gdscripts/interaction/InteractionObject.gd" id="5_vucmd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qv21c"]
+size = Vector2(1080, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dk4yb"]
+size = Vector2(20, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u63ts"]
+size = Vector2(20, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brib7"]
+size = Vector2(1080, 151)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2dixu"]
+size = Vector2(1218, 20)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_uupts"]
+a = Vector2(29, 24)
+b = Vector2(-36, -24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uupts"]
+size = Vector2(50, 18.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3dnxy"]
+size = Vector2(117.5, 220.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vucmd"]
+size = Vector2(63, 244)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kqajr"]
+size = Vector2(56, 103.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_risbr"]
+size = Vector2(101, 85.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ketqm"]
+size = Vector2(89, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nuaid"]
+size = Vector2(313, 118)
+
+[node name="Room3" type="Area2D" unique_id=570270020]
+script = ExtResource("1_uupts")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=50339929]
+shape = SubResource("RectangleShape2D_qv21c")
+
+[node name="Room3" type="Sprite2D" parent="." unique_id=485803757]
+texture = ExtResource("1_qv21c")
+
+[node name="RoomBorder1" type="StaticBody2D" parent="." unique_id=373033309]
+position = Vector2(-553, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder1" unique_id=1441487885]
+position = Vector2(3, 0)
+shape = SubResource("RectangleShape2D_dk4yb")
+
+[node name="RoomBorder2" type="Area2D" parent="." unique_id=381507211 groups=["player"]]
+position = Vector2(553, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder2" unique_id=974751051]
+position = Vector2(-3, 0)
+shape = SubResource("RectangleShape2D_u63ts")
+
+[node name="RoomBorder3" type="StaticBody2D" parent="." unique_id=1744778321]
+position = Vector2(0, -165)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder3" unique_id=231110775]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_brib7")
+
+[node name="RoomBorder4" type="StaticBody2D" parent="." unique_id=573016599]
+position = Vector2(0, 247)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder4" unique_id=1412336968]
+shape = SubResource("RectangleShape2D_2dixu")
+
+[node name="RoomBorder6" type="StaticBody2D" parent="." unique_id=810639903]
+position = Vector2(199, -86)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomBorder6" unique_id=1475789756]
+position = Vector2(0, 3)
+shape = SubResource("SegmentShape2D_uupts")
+
+[node name="Door" type="Area2D" parent="." unique_id=499358770 groups=["player"]]
+position = Vector2(383, -1)
+
+[node name="DoorSprite" type="Sprite2D" parent="Door" unique_id=292222484]
+texture = ExtResource("2_dk4yb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=1847622999]
+position = Vector2(0, -42.375)
+shape = SubResource("RectangleShape2D_uupts")
+
+[node name="Kitchen" type="StaticBody2D" parent="." unique_id=1882179816]
+position = Vector2(-180, -74)
+
+[node name="Kitchen1" type="Sprite2D" parent="Kitchen" unique_id=829437026]
+position = Vector2(8, 16)
+texture = ExtResource("3_u63ts")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kitchen" unique_id=1805833184]
+polygon = PackedVector2Array(-48, -29, -11, -66, 15, -92, 41, -92, 64, -92, 64, -66, 64, -43, 59, -38, 54, -33, 48, -27, 32, -12, 18, 2, 2, 20, -9, 20, -31, 20, -48, 20)
+
+[node name="InteractionBox" type="Area2D" parent="Kitchen" unique_id=1954759653]
+collision_layer = 2
+collision_priority = 2.0
+monitorable = false
+script = ExtResource("5_vucmd")
+interaction_name = "ROOM3_KITCHEN1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kitchen/InteractionBox" unique_id=2010627841]
+position = Vector2(11.25, 12.75)
+shape = SubResource("RectangleShape2D_3dnxy")
+
+[node name="CookingRange" type="StaticBody2D" parent="." unique_id=180163317]
+position = Vector2(0, -62)
+
+[node name="CookingRange" type="Sprite2D" parent="CookingRange" unique_id=596143738]
+position = Vector2(1, -56)
+texture = ExtResource("4_2dixu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CookingRange" unique_id=169407687]
+position = Vector2(0, -156)
+shape = SubResource("RectangleShape2D_vucmd")
+
+[node name="InteractionBox" type="Area2D" parent="CookingRange" unique_id=1271068356]
+position = Vector2(1, 32)
+collision_layer = 2
+collision_priority = 2.0
+monitorable = false
+script = ExtResource("5_vucmd")
+interaction_name = "ROOM3_COOKINGRANGE"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CookingRange/InteractionBox" unique_id=1308884883]
+position = Vector2(0, -15.25)
+shape = SubResource("RectangleShape2D_kqajr")
+
+[node name="Fridge" type="StaticBody2D" parent="." unique_id=951399896]
+position = Vector2(148, -54)
+
+[node name="Fridge" type="Sprite2D" parent="Fridge" unique_id=1421589664]
+position = Vector2(-1, 2)
+texture = ExtResource("5_uupts")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Fridge" unique_id=1007774354]
+polygon = PackedVector2Array(-34, -50, 16, -50, 23.078754, -42.92125, 32, -34, 32, -17, 22, -17, 8, -17, -18, -17, -27, -23, -34, -30, -34, -43)
+
+[node name="InteractionBox" type="Area2D" parent="Fridge" unique_id=551802810]
+collision_layer = 2
+collision_priority = 2.0
+monitorable = false
+script = ExtResource("5_vucmd")
+interaction_name = "ROOM3_FRIDGE"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fridge/InteractionBox" unique_id=1653279151 groups=["player"]]
+shape = SubResource("RectangleShape2D_risbr")
+
+[node name="ExitRoom3" type="Area2D" parent="." unique_id=842321386 groups=["player"]]
+position = Vector2(-421, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitRoom3" unique_id=1033029380]
+shape = SubResource("RectangleShape2D_ketqm")
+
+[node name="SpawnPoints" type="Node" parent="." unique_id=1429177931 groups=["aw_animation_player_only", "player"]]
+
+[node name="Default" type="Marker2D" parent="SpawnPoints" unique_id=36155124]
+position = Vector2(0, 80)
+
+[node name="FromRoom1" type="Marker2D" parent="SpawnPoints" unique_id=715455247]
+position = Vector2(-419, 64)
+
+[node name="FromRoom2" type="Marker2D" parent="SpawnPoints" unique_id=504350137]
+position = Vector2(529, 112)
+
+[node name="FromRoom4" type="Marker2D" parent="SpawnPoints" unique_id=1735364042]
+position = Vector2(383, 46)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1914420730]
+position = Vector2(383, -108)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1983060562]
+position = Vector2(1.5, -9)
+shape = SubResource("RectangleShape2D_nuaid")
+
+[connection signal="body_entered" from="RoomBorder2" to="." method="_on_room_border_2_body_entered"]
+[connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
+[connection signal="body_entered" from="ExitRoom3" to="." method="_on_exit_room_3_body_entered"]

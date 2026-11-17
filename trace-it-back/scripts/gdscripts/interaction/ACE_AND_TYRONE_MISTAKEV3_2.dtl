@@ -1,0 +1,24 @@
+join ACE center
+join Tyrone center
+ACE: Not bad at all...
+Tyrone: Heh... I actually understood that one.
+Tyrone: But I'm wondering what Java really did with all those boxes.
+ACE: Here's the play by play. Java made a box named x for an int, and dropped the number 5 inside.
+ACE: Then it made a String box for text, and a boolean box for true or false.
+ACE: After that, it used the operators you placed to add and assign everything together.
+Tyrone: So different boxes for different data, and operators to change them.
+ACE: Exactly. And every name has to match its box, letter for letter. message is not the same as Message.
+ACE: Small things like that are where most slips happen, so it's good you noticed them.
+Tyrone: One wrong letter and Java has no idea what I mean.
+Tyrone: Something tells me the next one is where it really gets scary...
+ACE: But you're still learning, aren't you?
+Tyrone: ...
+Tyrone: ...I suppose I am.
+Tyrone: I just hope this one sticks too.
+ACE: Now,
+ACE: If you want to take a break, you can tell me now
+ACE: But if you're willing to continue to Strings, Math, and Booleans, are you ready for it?
+- Yes
+- Maybe later
+	set {chapter_one.continue_puzzle.Later} = "Later"
+[end_timeline]

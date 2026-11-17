@@ -1,0 +1,21 @@
+join ACE center
+ACE: Well done!
+ACE: You know at least have the basic bits in predicting what happens in a program.
+join Tyrone center
+Tyrone: It kind of feels like juggling
+Tyrone: ... but instead of anything physical, it's something I'm doing in the screen.
+ACE: Seems like it indeed.
+ACE: I think it's time we kick it up a notch.
+ACE: Nowadays, even specific words in a code need some sort of protection too.
+ACE: They can also depend on what part of the project accesses it or not.
+Tyrone: ...
+Tyrone: ... So...
+Tyrone: ... Just as long as they have the proper terms, or sometimes it's the exact word needed to call it out, right?
+ACE: Good guess.
+ACE: We're doing Encapsulation, then.
+Tyrone: Okay... this might be the elephant in the room that begs to be addressed...
+ACE: Now, if you really want to take a break, it's up to you this time.
+- Yes
+- Maybe later
+	set {chapter_one.continue_puzzle.Later} = "Later"
+[end_timeline]

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bctkchfnb38dc"]
+
+[ext_resource type="Script" uid="uid://dpw8vtnve7w3i" path="res://scripts/gdscripts/puzzles/word_bank.gd" id="1_coykj"]
+
+[node name="WordBank" type="Control" unique_id=760408880]
+layout_mode = 3
+anchor_top = 0.73300004
+anchor_right = 0.48700002
+anchor_bottom = 0.83300006
+offset_top = 0.15997314
+offset_right = 0.3199768
+offset_bottom = 0.15997314
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_coykj")
+
+[node name="Panel" type="Panel" parent="." unique_id=877319914]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel" unique_id=791331559]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+vertical_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/ScrollContainer" unique_id=1121378097]
+layout_mode = 2

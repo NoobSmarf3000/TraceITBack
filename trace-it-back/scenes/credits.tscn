@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bok4uubgjc1h6"]
+
+[ext_resource type="Script" uid="uid://deouajdf60p2o" path="res://scripts/menu/credits.gd" id="1_0ctdu"]
+[ext_resource type="FontFile" uid="uid://carq468jgkgw2" path="res://assets/texts/CfBlackboardPersonalRegular-AKPg.ttf" id="2_board"]
+[ext_resource type="FontFile" uid="uid://um2egfwsdklw" path="res://assets/texts/DeterminationSansWebRegular-369X.ttf" id="3_sans"]
+
+[node name="Credits" type="Control" unique_id=485006024]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ctdu")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1774859397]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Center" type="CenterContainer" parent="." unique_id=371049637]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Page" type="VBoxContainer" parent="Center" unique_id=944329454]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(580, 0)
+layout_mode = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="Heading" type="Label" parent="Center/Page" unique_id=1983273363]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.68, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_sans")
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+
+[node name="Main" type="Label" parent="Center/Page" unique_id=1012951886]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_board")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+
+[node name="Extra" type="Label" parent="Center/Page" unique_id=1419928962]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_fonts/font = ExtResource("3_sans")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
+[node name="SkipHint" type="Label" parent="." unique_id=1795202618]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.35)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -190.0
+offset_top = -30.0
+offset_right = -12.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_sans")
+theme_override_font_sizes/font_size = 14
+text = "Esc to skip"
+horizontal_alignment = 2
